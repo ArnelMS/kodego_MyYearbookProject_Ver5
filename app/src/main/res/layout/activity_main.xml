@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="432dp"
+        android:layout_height="646dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnProfile"
+        android:layout_width="45dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/btnChat"
+        app:layout_constraintStart_toEndOf="@+id/btnChat"
+        app:layout_constraintTop_toTopOf="@+id/btnChat"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/proifle_photo2" />
+
+    <ImageButton
+        android:id="@+id/btnChat"
+        android:layout_width="46dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="40dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/btnMyYearbook"
+        app:layout_constraintStart_toEndOf="@+id/btnMyYearbook"
+        app:layout_constraintTop_toTopOf="@+id/btnMyYearbook"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/chat_icon" />
+
+    <ImageButton
+        android:id="@+id/btnMyYearbook"
+        android:layout_width="59dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="40dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDashboard"
+        app:layout_constraintStart_toEndOf="@+id/btnDashboard"
+        app:layout_constraintTop_toTopOf="@+id/btnDashboard"
+        app:layout_constraintVertical_bias="0.857"
+        app:srcCompat="@drawable/myyearbook_icon" />
+
+    <ImageButton
+        android:id="@+id/btnDashboard"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/btnHome"
+        app:layout_constraintStart_toEndOf="@+id/btnHome"
+        app:layout_constraintTop_toTopOf="@+id/btnHome"
+        app:layout_constraintVertical_bias="0.571"
+        app:srcCompat="@drawable/dashboar_icon" />
+
+    <ImageButton
+        android:id="@+id/btnHome"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_marginBaseline="0dp"
+        app:srcCompat="@drawable/home_icon" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="40dp"
+        android:layout_height="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Home"
+        android:textAlignment="center"
+        android:textColor="#636363"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnHome" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="46dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginBottom="16dp"
+        android:text="Chat"
+        android:textAlignment="center"
+        android:textColor="#636363"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="45dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="Profile"
+        android:textAlignment="center"
+        android:textColor="#636363"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="75dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="10dp"
+        android:text="My Yearbook"
+        android:textAlignment="center"
+        android:textColor="#636363"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/btnMyYearbook"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="70dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="16dp"
+        android:text="Dashboard"
+        android:textAlignment="center"
+        android:textColor="#636363"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
