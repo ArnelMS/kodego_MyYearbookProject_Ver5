@@ -4,18 +4,329 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".FragmentFiveProfile">
 
     <!-- TODO: Update blank fragment layout -->
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldFirstName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="201dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/First_Name"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6">
+
+
+        <TextView
+            android:id="@+id/tvFirstName1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/First_Name"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvFirstName2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:text="ARNEL"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldMiddleName"
+        android:layout_width="202dp"
+        android:layout_height="35dp"
+        android:hint="@string/Middle_Name"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textFieldFirstName"
+        app:layout_constraintTop_toTopOf="@+id/textFieldFirstName">
+
+
+        <TextView
+            android:id="@+id/tvMiddleName1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Middle_Name"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvMiddleName2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:text="MENDOZA"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldMaidenName"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="7dp"
+        android:hint="@string/Maiden_Name"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldFirstName">
+
+
+        <TextView
+            android:id="@+id/tvMaidenName1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Maiden_Name"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvMaidenName2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:hint="(if married)"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:text="(If Married)"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldLastName"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="7dp"
+        android:hint="@string/Last_Name"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">
+
+
+        <TextView
+            android:id="@+id/tvLastName1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Last_Name"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvLastName2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:text="SEBASTIAN"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldMobile"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="7dp"
+        android:hint="@string/Mobile"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldLastName">
+
+
+        <TextView
+            android:id="@+id/tvMobile1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Mobile"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvMobile2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:text="09991234567"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldEmail"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="7dp"
+        android:hint="@string/Email"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMobile">
+
+
+        <TextView
+            android:id="@+id/tvEmail1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Email"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvEmail2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:text="MyEmailAddress@email.com"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldFacebookUrl"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="7dp"
+        android:hint="@string/Facebook_URL"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldEmail">
+
+
+        <TextView
+            android:id="@+id/tvFacebookURL1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Facebook_URL"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvFacebookURL2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:inputType="textWebEditText"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:text="https://web.facebook.com/123456789"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="186dp"
-        android:layout_height="183dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="252dp"
-        android:src="@drawable/proifle_photo1"
+        android:id="@+id/imageView6"
+        android:layout_width="425dp"
+        android:layout_height="185dp"
+        android:src="@drawable/coloredboxes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="144dp"
+        android:text="Update Profile"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldFacebookUrl" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:text="Privacy Setting"
+        android:textColor="#050505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:text="Log Out"
+        android:textColor="#FF0000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

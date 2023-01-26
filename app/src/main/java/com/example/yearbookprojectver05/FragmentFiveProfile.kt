@@ -10,11 +10,17 @@ import com.example.yearbookprojectver05.databinding.FragmentFiveProfileBinding
 class FragmentFiveProfile : Fragment() {
 
     lateinit var binding: FragmentFiveProfileBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentFiveProfileBinding.inflate(layoutInflater)
         return binding.root
+
+        binding.textView11.setOnClickListener()
+
     }
+
+
 }

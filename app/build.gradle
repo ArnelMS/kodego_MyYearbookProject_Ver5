@@ -34,6 +34,13 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+//    //Material Dependency
+//    allprojects {
+//        repositories {
+//            google(com.google.android.material.material)
+//            mavenCentral()
+//        }
+//    }
 }
 
 dependencies {
@@ -53,5 +60,8 @@ dependencies {
     implementation 'com.karumi:dexter:6.2.2' // PERMISSION -> CAMERA
     implementation 'com.github.bumptech.glide:glide:4.14.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+
+    // Additional material Dependencies
+    implementation 'com.google.android.material:material:<version>'
 
 }

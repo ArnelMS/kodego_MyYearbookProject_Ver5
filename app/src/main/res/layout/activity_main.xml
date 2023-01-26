@@ -9,8 +9,8 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="432dp"
-        android:layout_height="646dp"
+        android:layout_width="match_parent"
+        android:layout_height="680dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -146,5 +146,27 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/btnFragmentSix"
+        android:layout_width="137dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="4dp"
+        android:text="Fragment Six"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <Button
+        android:id="@+id/btnFragmentZero"
+        android:layout_width="117dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="4dp"
+        android:text="Fragment Zero"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
