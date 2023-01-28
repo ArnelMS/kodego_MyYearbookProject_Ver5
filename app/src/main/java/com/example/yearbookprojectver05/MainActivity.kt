@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         val fragmentThreeMyYearbook = FragmentThreeMyYearbook()
         val fragmentFourChat = FragmentFourChat()
         val fragmentFiveProfile = FragmentFiveProfile()
+
         val fragmentZero = FragmentZero()
         val fragmentSixEditProfile = FragmentSixEditProfile()
 
@@ -67,6 +68,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnFragmentSix.setOnClickListener() {
             supportFragmentManager.beginTransaction().apply {
                 replace(binding.frameLayout.id, fragmentSixEditProfile)
+
                 commit()
             }
         }

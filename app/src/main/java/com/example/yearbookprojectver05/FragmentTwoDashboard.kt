@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.yearbookprojectver05.databinding.FragmentTwoDashboardBinding
+import com.google.android.material.tabs.TabLayout
 
 class FragmentTwoAppCompat : AppCompatActivity() {
     class FragmentTwoDashboard : Fragment() {
@@ -25,7 +26,7 @@ class FragmentTwoAppCompat : AppCompatActivity() {
             savedInstanceState: Bundle?
         ): View? {
             var binding = FragmentTwoDashboardBinding.inflate(layoutInflater)
-            return binding.root
+
 
             //data source
             val dashboardList = mutableListOf<DataClassDashboardPosts>(
@@ -45,7 +46,9 @@ class FragmentTwoAppCompat : AppCompatActivity() {
             val adapter = DashboardAdapter(dashboardList)
 
             binding.recyclerDashboard.adapter = adapter
-//            binding.recyclerDashboard.layoutManager = LinearLayoutManager(this)
+            binding.recyclerDashboard.layoutManager = LinearLayoutManager(activity)
+
+            return binding.root
         }
     }
 }

@@ -9,8 +9,9 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="680dp"
+        android:layout_width="414dp"
+        android:layout_height="566dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnMyYearbook"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -149,24 +150,35 @@
 
     <Button
         android:id="@+id/btnFragmentSix"
-        android:layout_width="137dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="256dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="161dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
         android:text="Fragment Six"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnFragmentZero"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
     <Button
         android:id="@+id/btnFragmentZero"
-        android:layout_width="117dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="183dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:text="Fragment Zero"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="29dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#00D3D2D2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_menu_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

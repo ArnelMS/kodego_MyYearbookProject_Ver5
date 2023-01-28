@@ -34,13 +34,6 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-//    //Material Dependency
-//    allprojects {
-//        repositories {
-//            google(com.google.android.material.material)
-//            mavenCentral()
-//        }
-//    }
 }
 
 dependencies {
@@ -63,5 +56,7 @@ dependencies {
 
     // Additional material Dependencies
     implementation 'com.google.android.material:material:<version>'
+
+    
 
 }

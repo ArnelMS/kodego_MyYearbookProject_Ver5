@@ -10,6 +10,13 @@
     <!-- TODO: Update blank fragment layout -->
 
 
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="142dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="375dp"></LinearLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldFirstName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -297,7 +304,7 @@
         tools:src="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/tvUpdateProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -308,7 +315,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textFieldFacebookUrl" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/tvPrivacySetting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -316,10 +323,10 @@
         android:text="Privacy Setting"
         android:textColor="#050505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUpdateProfile" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/tvLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -327,6 +334,6 @@
         android:text="Log Out"
         android:textColor="#FF0000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPrivacySetting" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
