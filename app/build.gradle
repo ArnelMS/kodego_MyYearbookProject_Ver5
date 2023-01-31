@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -56,7 +57,7 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'// New Addition
     implementation 'com.google.android.gms:play-services-maps:18.1.0'// New Addition to use SplashActivity Click "Sync Now"
     implementation 'com.karumi:dexter:6.2.2'
-    implementation 'com.google.firebase:firebase-auth:21.0.2'
+//    implementation 'com.google.firebase:firebase-auth:21.1.0' removed during // FIREBASE AUTHENTICATION
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
@@ -68,4 +69,11 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
 
+// FIREBASE AUTHENTICATION
+// Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:31.2.0')
+
+// Add the dependency for the Firebase Authentication library
+// When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth-ktx'
 }

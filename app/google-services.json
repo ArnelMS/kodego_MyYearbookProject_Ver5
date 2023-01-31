@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1086758515470",
+    "project_id": "myvirtualyearbook",
+    "storage_bucket": "myvirtualyearbook.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086758515470:android:75de5ec1afa9cb78d11d5f",
+        "android_client_info": {
+          "package_name": "com.example.yearbookprojectver05"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086758515470-r2b072m0krnqke71f7p1h6v6bq8u9skc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9koE0I8j6zQapAfQve6Wnx1-XH4FJREU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086758515470-r2b072m0krnqke71f7p1h6v6bq8u9skc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
