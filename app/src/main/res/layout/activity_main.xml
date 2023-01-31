@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/mivyb_activityBg"
     tools:context=".MainActivity">
 
     <FrameLayout
@@ -184,12 +184,12 @@
         app:srcCompat="@drawable/baseline_menu_24" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="99dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="256dp"
+        android:id="@+id/imageView7"
+        android:layout_width="100dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="248dp"
         app:layout_constraintStart_toEndOf="@+id/btnMenuDialog"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/mivyb_png" />
+        app:srcCompat="@drawable/mivyb_png_bg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
