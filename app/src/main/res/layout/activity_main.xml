@@ -9,13 +9,16 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="414dp"
-        android:layout_height="566dp"
+        android:layout_width="match_parent"
+        android:layout_height="671dp"
         app:layout_constraintBottom_toTopOf="@+id/btnMyYearbook"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.279">
+
+    </FrameLayout>
 
     <ImageButton
         android:id="@+id/btnProfile"
@@ -171,14 +174,22 @@
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btnMenuDialog"
         android:layout_width="29dp"
         android:layout_height="28dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:background="#00D3D2D2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_menu_24" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="99dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="256dp"
+        app:layout_constraintStart_toEndOf="@+id/btnMenuDialog"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mivyb_png" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,11 @@
 package com.example.yearbookprojectver05
 
+import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.yearbookprojectver05.databinding.ActivityMainBinding
+import com.example.yearbookprojectver05.databinding.CustomDialog01Binding
 
 class MainActivity : AppCompatActivity() {
 
@@ -72,6 +75,21 @@ class MainActivity : AppCompatActivity() {
                 commit()
             }
         }
+
+        binding.btnMenuDialog.setOnClickListener() {
+            showCustomDialog()
+            Toast.makeText(applicationContext,"MENU", Toast.LENGTH_SHORT).show()
+        }
+
+    }
+
+    private fun showCustomDialog() {
+        val customDialog : Dialog = Dialog(this)
+        val dialogBinding: CustomDialog01Binding = CustomDialog01Binding.inflate(layoutInflater)
+        customDialog.setContentView(dialogBinding.root)
+
+        customDialog.show()
+
 
     }
 }

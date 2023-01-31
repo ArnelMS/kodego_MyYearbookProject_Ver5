@@ -6,5 +6,16 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#0788BA</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="mivyb_primary">#EF5F4B</color>
+    <color name="mivyb_secondary">#46A69F</color>
+    <color name="mivyb_tertiary">#FEB97C</color>
+    <color name="mivyb_background">#3A5F6B</color>
+    <color name="mivyb_activitybg">#DDDDDD</color>
+    <color name="mivyb_light">#EDBB88</color>
+    <color name="mivyb_text">#3A5F6B</color>
+    <color name="mivyb_dark">#374764</color>
+
+
 </resources>

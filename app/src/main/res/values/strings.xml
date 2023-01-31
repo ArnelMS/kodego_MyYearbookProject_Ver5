@@ -22,5 +22,10 @@
     <string name="Chat">Chat</string>
     <string name="Profile">Profile</string>
 
+    <string name="Menu">Menu</string>
+    <string name="Profile_Setting">Profile Setting</string>
+    <string name="Privacy_Setting">Privacy Setting</string>
+    <string name="Logout">Logout</string>
+
 
 </resources>
