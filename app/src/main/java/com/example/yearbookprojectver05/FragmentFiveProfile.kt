@@ -20,10 +20,6 @@ class FragmentFiveProfile : Fragment() {
     ): View? {
         binding = FragmentFiveProfileBinding.inflate(layoutInflater)
 
-        binding.tvUpdateProfile.setOnClickListener(){
-
-        }
-
         return binding.root
 
     }

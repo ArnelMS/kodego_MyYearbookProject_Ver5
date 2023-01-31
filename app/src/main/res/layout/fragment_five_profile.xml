@@ -11,18 +11,18 @@
 
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="142dp"
+        android:layout_width="392dp"
+        android:layout_height="53dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="375dp"></LinearLayout>
+        tools:layout_editor_absoluteY="472dp"></LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldFirstName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="201dp"
         android:layout_height="35dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="30dp"
         android:hint="@string/First_Name"
         android:paddingStart="20dp"
         android:paddingEnd="10dp"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6">
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
 
         <TextView
@@ -286,54 +286,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="425dp"
-        android:layout_height="185dp"
-        android:src="@drawable/coloredboxes"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/tvUpdateProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="144dp"
-        android:text="Update Profile"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldFacebookUrl" />
-
-    <TextView
-        android:id="@+id/tvPrivacySetting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="14dp"
-        android:text="Privacy Setting"
-        android:textColor="#050505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUpdateProfile" />
-
-    <TextView
-        android:id="@+id/tvLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="14dp"
-        android:text="Log Out"
-        android:textColor="#FF0000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPrivacySetting" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
