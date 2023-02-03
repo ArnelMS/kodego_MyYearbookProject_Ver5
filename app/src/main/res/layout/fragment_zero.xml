@@ -4,41 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".FragmentZero">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldFirstName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="label"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/studentsRecyclerView"
+        android:layout_width="405dp"
+        android:layout_height="623dp"
+        android:layout_margin="0dp"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tvLabelOnClickL"
-            android:layout_width="341dp"
-            android:layout_height="55dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="168dp" />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.723" />
 
     <TextView
-        android:id="@+id/tvSampleClick"
-        android:layout_width="266dp"
-        android:layout_height="128dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="304dp"
-        android:background="#23CDCD"
-        android:text="SAMPLE TEXT"
-        android:textColor="#DC0B0B"
-        android:textColorHighlight="#0420D6"
-        android:textColorHint="#18B306"
-        android:textColorLink="#CC08F8"
+        android:id="@+id/tvSectionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Section Name"
+        android:textColor="#000000"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/studentsRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textFieldFirstName" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

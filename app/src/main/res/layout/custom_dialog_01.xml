@@ -5,7 +5,7 @@
     android:layout_width="190dp"
     android:layout_height="300dp"
     android:layout_centerHorizontal="false"
-    android:background="@color/white"
+    android:background="@color/mivyb_activityBg"
     android:padding="10dp">
 
 
@@ -30,7 +30,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="30dp"
         android:text="@string/Profile_Setting"
-        android:textColor="#000000"
+        android:textColor="@color/mivyb_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Menu" />
 
@@ -41,7 +41,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="4dp"
         android:text="@string/Privacy_Setting"
-        android:textColor="#000000"
+        android:textColor="@color/mivyb_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvProfileSetting" />
 

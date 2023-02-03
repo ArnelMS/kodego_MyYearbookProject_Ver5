@@ -10,20 +10,19 @@
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="671dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/mivyb_activityBg"
         app:layout_constraintBottom_toTopOf="@+id/btnMyYearbook"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.279">
-
-    </FrameLayout>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageButton
         android:id="@+id/btnProfile"
         android:layout_width="45dp"
-        android:layout_height="37dp"
+        android:layout_height="39dp"
         android:layout_marginStart="24dp"
         android:backgroundTint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/btnChat"
@@ -36,7 +35,7 @@
         android:id="@+id/btnChat"
         android:layout_width="46dp"
         android:layout_height="43dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="30dp"
         android:backgroundTint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/btnMyYearbook"
         app:layout_constraintStart_toEndOf="@+id/btnMyYearbook"
@@ -97,7 +96,6 @@
         android:id="@+id/textView8"
         android:layout_width="46dp"
         android:layout_height="16dp"
-        android:layout_marginStart="124dp"
         android:layout_marginBottom="16dp"
         android:text="Chat"
         android:textAlignment="center"
@@ -105,15 +103,15 @@
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="@+id/btnChat" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="45dp"
+        android:layout_width="58dp"
         android:layout_height="16dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="22dp"
         android:layout_marginBottom="16dp"
-        android:text="Profile"
+        android:text="My Profile"
         android:textAlignment="center"
         android:textColor="#636363"
         android:textSize="10sp"
@@ -151,28 +149,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView2" />
 
-    <Button
-        android:id="@+id/btnFragmentSix"
-        android:layout_width="161dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
-        android:text="Fragment Six"
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/btnFragmentZero"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
-
-    <Button
-        android:id="@+id/btnFragmentZero"
-        android:layout_width="183dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:text="Fragment Zero"
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
-
     <ImageButton
         android:id="@+id/btnMenuDialog"
         android:layout_width="29dp"
@@ -185,9 +161,10 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="100dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="248dp"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="304dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnMenuDialog"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/mivyb_png_bg" />

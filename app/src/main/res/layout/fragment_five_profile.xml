@@ -13,9 +13,11 @@
     <LinearLayout
         android:layout_width="392dp"
         android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="472dp"></LinearLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldFacebookUrl"></LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldFirstName"

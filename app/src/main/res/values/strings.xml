@@ -9,6 +9,7 @@
     <string name="Login">Login</string>
     <string name="Register">register</string>
 
+    <string name="action_bar_name">MiVYB - My Virtual Yearbook</string>
     <string name="First_Name">First Name</string>
     <string name="Middle_Name">Middle Name</string>
     <string name="Maiden_Name">Maiden Name</string>
@@ -26,6 +27,12 @@
     <string name="Profile_Setting">Profile Setting</string>
     <string name="Privacy_Setting">Privacy Setting</string>
     <string name="Logout">Logout</string>
+
+    <string name="MiVYB">MiVYB</string>
+    <string name="title_activity_main4">MainActivity4</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 
 
 </resources>

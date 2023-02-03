@@ -30,12 +30,15 @@
         android:id="@+id/etUsernameEmailLogin"
         android:layout_width="280dp"
         android:layout_height="50dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Username / Email"
         android:inputType="text"
-        android:textColorHint="#DCEDE9E9"
-        app:layout_constraintStart_toStartOf="@+id/tvWelcome"
+        android:textColor="@color/mivyb_lightYellow"
+        android:textColorHighlight="@color/mivyb_lightYellow"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/imgBackground"
         app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
 
     <EditText
@@ -47,6 +50,7 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:textColor="@color/white"
+        android:textColorHighlight="@color/mivyb_lightYellow"
         android:textColorHint="#DCEDE9E9"
         app:layout_constraintStart_toStartOf="@+id/etUsernameEmailLogin"
         app:layout_constraintTop_toBottomOf="@+id/etUsernameEmailLogin" />
@@ -55,13 +59,13 @@
         android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
         android:layout_marginTop="56dp"
         android:text="WELCOME!"
         android:textAlignment="viewStart"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imgBackground"
         app:layout_constraintStart_toStartOf="@+id/imgBackground"
         app:layout_constraintTop_toTopOf="@+id/imgBackground" />
 

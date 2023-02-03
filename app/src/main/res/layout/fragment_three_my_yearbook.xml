@@ -6,14 +6,73 @@
     android:layout_height="match_parent"
     tools:context=".FragmentThreeMyYearbook">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:id="@+id/imgMySchool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/school_png72"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/backgrounds/scenic" />
+        app:layout_constraintVertical_bias="0.092" />
+
+    <ImageView
+        android:id="@+id/imgMySection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:src="@drawable/section_png72"
+        app:layout_constraintStart_toStartOf="@+id/imgMyBatch"
+        app:layout_constraintTop_toBottomOf="@+id/imgMyBatch" />
+
+    <TextView
+        android:id="@+id/tvMySchool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:text="My School"
+        android:textColor="@color/mivyb_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imgMySchool"
+        app:layout_constraintTop_toBottomOf="@+id/imgMySchool" />
+
+    <TextView
+        android:id="@+id/tvMySection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:text="My Section"
+        android:textColor="@color/mivyb_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imgMySection"
+        app:layout_constraintTop_toBottomOf="@+id/imgMySection" />
+
+    <TextView
+        android:id="@+id/tvMyBatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="8dp"
+        android:text="My Batch"
+        android:textColor="@color/mivyb_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imgMyBatch"
+        app:layout_constraintTop_toBottomOf="@+id/imgMyBatch" />
+
+    <ImageView
+        android:id="@+id/imgMyBatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:src="@drawable/batch_png72"
+        app:layout_constraintStart_toStartOf="@+id/imgMySchool"
+        app:layout_constraintTop_toBottomOf="@+id/imgMySchool" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

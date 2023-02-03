@@ -52,3 +52,5 @@ class FragmentTwoAppCompat : AppCompatActivity() {
         }
     }
 }
+
+//applicationContext() sa Fragment requiredContext()
