@@ -16,4 +16,11 @@ class StudentsDao {
         return dbReference.orderByKey()
 
     }
+    fun remove(key:String){
+        dbReference.child(key).removeValue()
+    }
+
+    fun update(key:String, map: Map<String,String>){
+        dbReference.child(key).updateChildren(map)
+    }
 }

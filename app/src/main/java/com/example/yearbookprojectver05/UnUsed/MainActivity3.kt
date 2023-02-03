@@ -1,7 +1,8 @@
-package com.example.yearbookprojectver05
+package com.example.yearbookprojectver05.UnUsed
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.yearbookprojectver05.R
 
 class MainActivity3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

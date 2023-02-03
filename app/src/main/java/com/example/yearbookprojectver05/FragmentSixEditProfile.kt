@@ -19,7 +19,7 @@ class FragmentSixEditProfile : Fragment() {
 
         var dao = StudentsDao()
 
-        binding.btnAddProfile.setOnClickListener() {
+        binding.btnSave.setOnClickListener() {
             dao.add(
                 Students(
                     123,

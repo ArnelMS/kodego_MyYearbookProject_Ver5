@@ -22,6 +22,16 @@ class ProfileSettingActivity : AppCompatActivity() {
         var dao = StudentsDao()
 
         binding.btnAddProfile.setOnClickListener() {
+            val imageNew = binding.imgProfileNew.toString()
+            val imageOld = binding.imgGradPic.toString()
+            val firstName = binding.etFirstName.text.toString()
+            val middleName = binding.etFirstName.text.toString()
+            val lastName = binding.etFirstName.text.toString()
+            val maidenName = binding.etFirstName.text.toString()
+            val mobile = binding.etFirstName.text.toString()
+            val email = binding.etFirstName.text.toString()
+            val facebookURL = binding.etFirstName.text.toString()
+
             dao.add(
                 Students(
                     123,

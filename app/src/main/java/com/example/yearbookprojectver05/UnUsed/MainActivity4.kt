@@ -1,4 +1,4 @@
-package com.example.yearbookprojectver05
+package com.example.yearbookprojectver05.UnUsed
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
