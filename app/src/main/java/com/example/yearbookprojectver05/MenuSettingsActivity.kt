@@ -18,6 +18,10 @@ class MenuSettingsActivity : AppCompatActivity()     {
             val intent = Intent(this, ProfileSettingActivity::class.java)
             startActivity(intent)
         }
+        binding.tvMyYearbookSetting.setOnClickListener() {
+            val intent = Intent(this, ProfileSettingActivity::class.java)
+            startActivity(intent)
+        }
 //        binding.tvProfileSetting.setOnClickListener() {
 //            supportFragmentManager.beginTransaction().apply {
 //                replace(binding.frameLayout.id, fragmentSixEditProfile)

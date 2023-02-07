@@ -19,15 +19,12 @@ class FragmentThreeMyYearbook : Fragment() {
     ): View? {
         binding = FragmentThreeMyYearbookBinding.inflate(layoutInflater)
 
-//        val fragmentZero = FragmentZero()
 
         binding.tvMySection.setOnClickListener() {
             val intent = Intent(context, MySectionActivity::class.java)
             startActivity(intent)
 
         }
-//            val intent = Intent(this, MySectionActivity::class.java)
-//            startActivity(intent)
 
         return binding.root
     }

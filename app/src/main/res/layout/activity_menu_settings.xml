@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     android:background="@color/mivyb_activityBg"
     tools:context=".MenuSettingsActivity">
+
     <ImageView
         android:id="@+id/imgRetroBG"
-        android:layout_width="511dp"
-        android:layout_height="837dp"
+        android:layout_width="603dp"
+        android:layout_height="987dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/retro_png_bg" />
@@ -23,44 +24,8 @@
         android:textColor="@color/mivyb_dark"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tvMySectionSetting"
-        app:layout_constraintTop_toBottomOf="@+id/tvDeleteBatch3" />
-
-    <TextView
-        android:id="@+id/tvEditClassmate"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:paddingStart="24dp"
-        android:text="@string/Edit_Classmate"
-        android:textColor="@color/mivyb_dark"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/tvMyYearbookSetting"
-        app:layout_constraintTop_toBottomOf="@+id/tvAddClassmate" />
-
-    <TextView
-        android:id="@+id/tvDeleteClassmate"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:paddingStart="24dp"
-        android:text="@string/Delete_Classmate"
-        android:textColor="@color/mivyb_dark"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/tvMyYearbookSetting"
-        app:layout_constraintTop_toBottomOf="@+id/tvEditClassmate" />
-
-    <TextView
-        android:id="@+id/tvAddClassmate"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:paddingStart="24dp"
-        android:text="@string/Add_Classmate"
-        android:textColor="@color/mivyb_dark"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/tvMyYearbookSetting"
-        app:layout_constraintTop_toBottomOf="@+id/tvMyYearbookSetting" />
+        app:layout_constraintStart_toStartOf="@+id/tvMyBatchSetting"
+        app:layout_constraintTop_toBottomOf="@+id/tvDeleteBatch" />
 
     <TextView
         android:id="@+id/tvSchoolLogoSettings"
@@ -86,18 +51,6 @@
         app:layout_constraintTop_toBottomOf="@+id/Menu" />
 
     <TextView
-        android:id="@+id/tvMySectionSetting"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:text="@string/My_Section"
-        android:textColor="@color/mivyb_dark"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tvMyBatchSetting"
-        app:layout_constraintTop_toBottomOf="@+id/tvDeleteBatch" />
-
-    <TextView
         android:id="@+id/tvYearbookSetting"
         android:layout_width="150dp"
         android:layout_height="25dp"
@@ -108,42 +61,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tvProfileSetting"
         app:layout_constraintTop_toBottomOf="@+id/tvProfileSetting" />
-
-    <TextView
-        android:id="@+id/tvAddSection"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:paddingStart="24dp"
-        android:text="@string/Add_Section"
-        android:textColor="@color/mivyb_dark"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/tvMySectionSetting"
-        app:layout_constraintTop_toBottomOf="@+id/tvMySectionSetting" />
-
-    <TextView
-        android:id="@+id/tvDeleteBatch3"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:paddingStart="24dp"
-        android:text="@string/Delete_Section"
-        android:textColor="@color/mivyb_dark"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/tvEditBatch3"
-        app:layout_constraintTop_toBottomOf="@+id/tvEditBatch3" />
-
-    <TextView
-        android:id="@+id/tvEditBatch3"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:paddingStart="24dp"
-        android:text="@string/Edit_Section"
-        android:textColor="@color/mivyb_dark"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/tvAddSection"
-        app:layout_constraintTop_toBottomOf="@+id/tvAddSection" />
 
     <TextView
         android:id="@+id/Menu"
@@ -213,21 +130,21 @@
         android:id="@+id/tvPrivacySetting4"
         android:layout_width="150dp"
         android:layout_height="25dp"
+        android:layout_marginTop="5dp"
         android:text="@string/Privacy_Setting"
         android:textColor="@color/mivyb_dark"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tvYearbookSetting"
-        app:layout_constraintTop_toBottomOf="@+id/tvDeleteClassmate" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMyYearbookSetting" />
 
     <TextView
         android:id="@+id/tvLogout"
         android:layout_width="150dp"
         android:layout_height="25dp"
-        android:layout_marginStart="200dp"
         android:layout_marginTop="24dp"
         android:text="@string/Logout"
-        android:textAlignment="viewEnd"
+        android:textAlignment="textStart"
         android:textColor="#FF0000"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -236,7 +153,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tvPrivacySetting4"
         app:layout_constraintTop_toBottomOf="@+id/tvPrivacySetting4"
-        app:layout_constraintVertical_bias="0.105" />
+        app:layout_constraintVertical_bias="0.132" />
 
     <TextView
         android:id="@+id/tvMyBatchSetting"

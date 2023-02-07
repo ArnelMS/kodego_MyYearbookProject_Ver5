@@ -23,7 +23,6 @@ lateinit var binding: ActivityMySectionBinding
         view()
     }
 
-
     private fun view() {
         dao.get().addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -76,10 +75,10 @@ lateinit var binding: ActivityMySectionBinding
             }
         }
         )
-    }private fun updateData(name : String, salary : String, id : String) {
-        var mapData = mutableMapOf<String,String>()
-        mapData["name"] = name
-        mapData["salary"] = salary
-        dao.update(id,mapData)
+//    }private fun updateData(name : String, salary : String, id : String) {
+//        var mapData = mutableMapOf<String,String>()
+//        mapData["name"] = name
+//        mapData["salary"] = salary
+//        dao.update(id,mapData)
     }
 }
