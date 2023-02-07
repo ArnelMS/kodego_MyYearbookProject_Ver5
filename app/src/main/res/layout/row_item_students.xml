@@ -3,27 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
+    android:layout_height="350dp"
     android:background="@color/mivyb_activityBg"
     android:backgroundTint="@color/mivyb_activityBg">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="340dp"
         android:layout_marginTop="5dp"
         android:background="@color/mivyb_activityBg"
-        android:backgroundTint="@color/teal_200"
         android:paddingStart="0dp"
         android:paddingTop="10dp"
-        app:cardBackgroundColor="@color/mivyb_secondary"
         app:cardCornerRadius="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="285dp"
+            android:layout_marginStart="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/mysection_bg_png" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="385dp"
+            android:layout_height="273dp">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textFieldFacebookUrl"
@@ -186,7 +195,7 @@
                 android:paddingEnd="10dp"
                 android:textColorHint="#000000"
                 app:hintTextColor="#000000"
-                app:layout_constraintStart_toEndOf="@+id/imgProfileOld"
+                app:layout_constraintStart_toEndOf="@+id/imgGradPic"
                 app:layout_constraintTop_toTopOf="parent">
 
 
@@ -296,7 +305,7 @@
                 app:srcCompat="@drawable/profile_modern" />
 
             <ImageView
-                android:id="@+id/imgProfileOld"
+                android:id="@+id/imgGradPic"
                 android:layout_width="71dp"
                 android:layout_height="86dp"
                 android:layout_marginStart="12dp"

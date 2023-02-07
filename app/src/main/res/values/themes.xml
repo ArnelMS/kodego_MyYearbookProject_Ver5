@@ -13,4 +13,13 @@
         <item name="android:statusBarColor">@color/teal_200</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.YearbookProjectVer05.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.YearbookProjectVer05.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.YearbookProjectVer05.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

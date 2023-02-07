@@ -23,16 +23,59 @@
     <string name="Chat">Chat</string>
     <string name="Profile">Profile</string>
 
+    //MENU SETTINGS
     <string name="Menu">Menu</string>
     <string name="Profile_Setting">Profile Setting</string>
+    <string name="Yearbook_Setting">Yearbook Setting</string>
+
+    <string name="My_School">My School</string>
+    <string name="Add_School">Add School</string>
+    <string name="Edit_School">Edit School</string>
+    <string name="Delete_School">Delete School</string>
+
+    <string name="School_Logo">School Logo Setting</string>
+    <string name="Add_School_logo">Add School logo</string>
+    <string name="Edit_School_logo">Edit School logo</string>
+    <string name="Delete_School_logo">Delete School logo</string>
+
+    <string name="My_Batch">My Batch</string>
+    <string name="Add_Batch">Add Batch</string>
+    <string name="Edit_Batch">Edit Batch</string>
+    <string name="Delete_Batch">Delete Batch</string>
+
+    <string name="My_Section">My Section</string>
+    <string name="Add_Section">Add Section</string>
+    <string name="Edit_Section">Edit Section</string>
+    <string name="Delete_Section">Delete Section</string>
+
+    <string name="My_Yearbook_Settings">My Yearbook Settings</string>
+    <string name="Add_Classmate">Add Classmate</string>
+    <string name="Edit_Classmate">Edit Classmate</string>
+    <string name="Delete_Classmate">Delete Classmate</string>
+
     <string name="Privacy_Setting">Privacy Setting</string>
+    <string name="Private">Private</string>
+    <string name="Public">Public</string>
+
     <string name="Logout">Logout</string>
 
+    //================================
     <string name="MiVYB">MiVYB</string>
     <string name="title_activity_main4">MainActivity4</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_activity_navigation_menu">NavigationMenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
 
 
 </resources>

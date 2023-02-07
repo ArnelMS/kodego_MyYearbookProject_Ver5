@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mivyb_activityBg"
-    tools:context=".UnUsed.MainActivity3">
+    tools:context=".Trash.MainActivity3">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

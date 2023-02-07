@@ -5,4 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mivyb_activityBg"
-    tools:context=".UnUsed.MainActivity2" />
+    tools:context=".Trash.MainActivity2" >
+
+        <Spinner
+        android:id="@+id/spinnerBatch"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+        android:id="@+id/textView"
+        android:layout_width="169dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="112dp"
+        android:text="Batch"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDashboard" />
+    </androidx.constraintlayout.widget.ConstraintLayout>

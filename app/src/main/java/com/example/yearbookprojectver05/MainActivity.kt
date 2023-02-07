@@ -4,8 +4,11 @@ import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
-import android.widget.Toast
+import com.example.yearbookprojectver05.Fragment01_Home.FragmentOneHome
+import com.example.yearbookprojectver05.Fragment02_Dashboard.FragmentTwoAppCompat
+import com.example.yearbookprojectver05.Fragment03_MyYearbook.FragmentThreeMyYearbook
+import com.example.yearbookprojectver05.Fragment04_Chat.FragmentFourChat
+import com.example.yearbookprojectver05.Fragment05_Profile.FragmentFiveProfile
 import com.example.yearbookprojectver05.databinding.ActivityMainBinding
 import com.example.yearbookprojectver05.databinding.CustomDialog01Binding
 
@@ -65,7 +68,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        binding.btnMenuDialog.setOnClickListener() {
+        binding.btnMenu.setOnClickListener() {
             val intent = Intent(this, MenuSettingsActivity::class.java)
             startActivity(intent)
 //        }

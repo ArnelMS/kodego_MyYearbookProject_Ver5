@@ -2,42 +2,48 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="125dp">
+    android:layout_width="400dp"
+    android:layout_height="150dp">
+
+    <TextView
+        android:id="@+id/tvItemDescription"
+        android:layout_width="196dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="8dp"
+        android:maxLines="1"
+        android:text="Item Descriptions here...."
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tvItemTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemTitle" />
+
+    <TextView
+        android:id="@+id/tvItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:maxLines="1"
+        android:text="Sample Event Title"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imgDashboardItem"
+        app:layout_constraintTop_toTopOf="@+id/imgDashboardItem" />
 
     <ImageView
-        android:id="@+id/imgDashboardPhoto"
-        android:layout_width="171dp"
-        android:layout_height="116dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:id="@+id/imgDashboardItem"
+        android:layout_width="160dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-    <EditText
-        android:id="@+id/etDashboardPosts"
-        android:layout_width="209dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:hint="Messages / Posts"
-        android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imgDashboardPhoto"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--        android:src="@drawable/mainbg"-->
+    <!--        app:shapeAppearance="@style/ShapeAppearanceOverlay.Avatar" />-->
 
-    <TextView
-        android:id="@+id/tvDashboardUsername"
-        android:layout_width="204dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/imgDashboardPhoto"
-        app:layout_constraintTop_toBottomOf="@+id/etDashboardPosts" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

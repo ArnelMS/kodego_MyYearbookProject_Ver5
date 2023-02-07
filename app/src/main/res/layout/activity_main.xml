@@ -80,7 +80,7 @@
         app:srcCompat="@drawable/home_icon" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvHomeBtnNav"
         android:layout_width="40dp"
         android:layout_height="16dp"
         android:layout_marginBottom="16dp"
@@ -93,7 +93,7 @@
         app:layout_constraintStart_toStartOf="@+id/btnHome" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/tvChatBtnNav"
         android:layout_width="46dp"
         android:layout_height="16dp"
         android:layout_marginBottom="16dp"
@@ -106,7 +106,7 @@
         app:layout_constraintStart_toStartOf="@+id/btnChat" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/tvProfileBtnNav"
         android:layout_width="58dp"
         android:layout_height="16dp"
         android:layout_marginStart="22dp"
@@ -117,10 +117,10 @@
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView8" />
+        app:layout_constraintStart_toEndOf="@+id/tvChatBtnNav" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tvMyYearbookBtnNav"
         android:layout_width="75dp"
         android:layout_height="19dp"
         android:layout_marginStart="16dp"
@@ -131,12 +131,12 @@
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/tvDashboardBtnNav"
         app:layout_constraintTop_toTopOf="@+id/btnMyYearbook"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvDashboardBtnNav"
         android:layout_width="70dp"
         android:layout_height="16dp"
         android:layout_marginStart="12dp"
@@ -147,10 +147,10 @@
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView2" />
+        app:layout_constraintStart_toEndOf="@+id/tvHomeBtnNav" />
 
     <ImageButton
-        android:id="@+id/btnMenuDialog"
+        android:id="@+id/btnMenu"
         android:layout_width="29dp"
         android:layout_height="28dp"
         android:layout_marginStart="16dp"
@@ -160,12 +160,12 @@
         app:srcCompat="@drawable/baseline_menu_24" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imgMivybLobo"
         android:layout_width="60dp"
         android:layout_height="25dp"
         android:layout_marginStart="304dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnMenuDialog"
+        app:layout_constraintStart_toEndOf="@+id/btnMenu"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/mivyb_png_bg" />
 

@@ -4,68 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentTwoDashboard">
+    tools:context=".Fragment02_Dashboard.FragmentTwoAppCompat">
+
+    <!--        tools:listitem="@layout/event_item_row" -->
+
+    <!--        tools:listitem="@layout/user_event_row" />-->
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="314dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="36dp"
-        android:text="News | Events | Activities"
+        android:id="@+id/tvDashboard"
+        android:layout_width="165dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:text="Dashboard"
         android:textAlignment="center"
-        android:textColor="#424242"
-        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerDashboard"
-        android:layout_width="403dp"
-        android:layout_height="470dp"
-        android:paddingStart="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="95dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:text="Delete"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerDashboard" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="95dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="Edit"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="@+id/button2" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="95dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="Show"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toTopOf="@+id/button2" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="95dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="Add"
+        android:id="@+id/RecyvlerViewDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="549dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toTopOf="@+id/button2" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDashboard" />
+
+    <EditText
+        android:id="@+id/searchEt"
+        android:layout_width="218dp"
+        android:layout_height="41dp"
+        android:drawableStart="@drawable/search_icon"
+        android:hint="Search"
+        android:paddingStart="0dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvDashboard"
+        app:layout_constraintTop_toTopOf="@+id/tvDashboard">
+
+    </EditText>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
