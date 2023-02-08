@@ -8,10 +8,10 @@
 
     <TextView
         android:id="@+id/tvDashboard"
-        android:layout_width="364dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="60dp"
-        android:text="W E L COME ! ! !"
+        android:text="W E L C O M E ! ! !"
         android:textAlignment="center"
         android:textColor="@color/mivyb_dark"
         android:textSize="24sp"
@@ -21,37 +21,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinnerBatch"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:minHeight="48dp"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="41dp"
-        android:layout_marginTop="32dp"
-        android:text="Batch"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="What is your batch?"
         android:textAlignment="center"
         android:textColor="@color/mivyb_dark"
-        android:textSize="34sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+    <Spinner
+        android:id="@+id/spinnerBatch"
+        android:layout_width="161dp"
+        android:layout_height="48dp"
+        android:minHeight="50dp"
+        android:padding="0dp"
+        android:paddingStart="50dp"
+        android:scrollbarSize="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="281dp"
+        android:layout_height="284dp"
         android:layout_marginTop="4dp"
         android:src="@drawable/abc_university_icon"
         app:layout_constraintEnd_toEndOf="parent"
