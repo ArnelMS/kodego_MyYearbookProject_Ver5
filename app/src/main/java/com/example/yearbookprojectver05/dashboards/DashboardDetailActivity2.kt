@@ -1,12 +1,10 @@
 package com.example.yearbookprojectver05.students
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.yearbookprojectver05.MenuSettingsActivity
 import com.example.yearbookprojectver05.databinding.ActivityStudentDetailBinding
 
-class StudentDetailActivity : AppCompatActivity() {
+class DashboardDetailActivity2 : AppCompatActivity() {
 
     lateinit var binding : ActivityStudentDetailBinding
     override fun onCreate(savedInstanceState: Bundle?) {

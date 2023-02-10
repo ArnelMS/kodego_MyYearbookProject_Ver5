@@ -19,31 +19,32 @@
         android:id="@+id/tvMyYearbookSetting"
         android:layout_width="150dp"
         android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:text="@string/My_Yearbook"
+        android:layout_marginTop="8dp"
+        android:text="@string/My_Yearbook_Settings"
         android:textColor="@color/mivyb_dark"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tvMyBatchSetting"
-        app:layout_constraintTop_toBottomOf="@+id/tvDeleteBatch" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMyBatchSetting" />
 
     <TextView
-        android:id="@+id/tvSchoolLogoSettings"
+        android:id="@+id/tvMyDashboardSetting"
         android:layout_width="150dp"
         android:layout_height="25dp"
-        android:paddingStart="24dp"
-        android:text="@string/School_Logo"
+        android:layout_marginTop="8dp"
+        android:text="@string/My_Dashboard_Settings"
         android:textColor="@color/mivyb_dark"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/tvEditSchool"
-        app:layout_constraintTop_toBottomOf="@+id/tvDeleteSchool" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvHomeSetting"
+        app:layout_constraintTop_toBottomOf="@+id/tvHomeSetting" />
 
     <TextView
-        android:id="@+id/tvProfileSetting"
+        android:id="@+id/tvHomeSetting"
         android:layout_width="150dp"
         android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:text="@string/Profile_Setting"
+        android:layout_marginTop="8dp"
+        android:text="@string/Home_Setting"
         android:textColor="@color/mivyb_dark"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -54,13 +55,13 @@
         android:id="@+id/tvYearbookSetting"
         android:layout_width="150dp"
         android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:text="@string/My_Yearbook"
+        android:layout_marginTop="4dp"
+        android:text="@string/Yearbook_Setting"
         android:textColor="@color/mivyb_dark"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tvProfileSetting"
-        app:layout_constraintTop_toBottomOf="@+id/tvProfileSetting" />
+        app:layout_constraintStart_toStartOf="@+id/tvMyDashboardSetting"
+        app:layout_constraintTop_toBottomOf="@+id/tvNewItemDashboard" />
 
     <TextView
         android:id="@+id/Menu"
@@ -91,52 +92,53 @@
         app:layout_constraintTop_toBottomOf="@+id/tvYearbookSetting" />
 
     <TextView
-        android:id="@+id/tvAddSchool"
+        android:id="@+id/tvNewItemDashboard"
         android:layout_width="150dp"
         android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:paddingStart="24dp"
-        android:text="@string/Add_School"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/New_Item_Dashboard_Settings"
         android:textColor="@color/mivyb_dark"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/tvMySchoolSetting"
-        app:layout_constraintTop_toBottomOf="@+id/tvMySchoolSetting" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvMyDashboardSetting"
+        app:layout_constraintTop_toBottomOf="@+id/tvMyDashboardSetting" />
 
     <TextView
-        android:id="@+id/tvEditSchool"
+        android:id="@+id/tvChatSetting"
         android:layout_width="150dp"
         android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:paddingStart="24dp"
-        android:text="@string/Edit_School"
-        android:textColor="@color/mivyb_dark"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/tvAddSchool"
-        app:layout_constraintTop_toBottomOf="@+id/tvAddSchool" />
-
-    <TextView
-        android:id="@+id/tvDeleteSchool"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:paddingStart="24dp"
-        android:text="@string/Delete_School"
-        android:textColor="@color/mivyb_dark"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/tvEditSchool"
-        app:layout_constraintTop_toBottomOf="@+id/tvEditSchool" />
-
-    <TextView
-        android:id="@+id/tvPrivacySetting4"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:text="@string/Privacy_Setting"
+        android:layout_marginTop="8dp"
+        android:text="@string/Chat_Setting"
         android:textColor="@color/mivyb_dark"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tvYearbookSetting"
         app:layout_constraintTop_toBottomOf="@+id/tvMyYearbookSetting" />
+
+    <TextView
+        android:id="@+id/tvPrivacySetting4"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Privacy_Setting"
+        android:textColor="@color/mivyb_dark"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvProfileSetting"
+        app:layout_constraintTop_toBottomOf="@+id/tvProfileSetting" />
+
+    <TextView
+        android:id="@+id/tvProfileSetting"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/Profile_Setting"
+        android:textColor="@color/mivyb_dark"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvChatSetting"
+        app:layout_constraintTop_toBottomOf="@+id/tvChatSetting" />
 
     <TextView
         android:id="@+id/tvLogout"
@@ -159,48 +161,13 @@
         android:id="@+id/tvMyBatchSetting"
         android:layout_width="150dp"
         android:layout_height="25dp"
+        android:layout_marginTop="12dp"
         android:text="@string/My_Batch"
         android:textColor="@color/mivyb_dark"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tvMySchoolSetting"
-        app:layout_constraintTop_toBottomOf="@+id/tvSchoolLogoSettings" />
-
-    <TextView
-        android:id="@+id/tvEditBatch"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:paddingStart="24dp"
-        android:text="@string/Edit_Batch"
-        android:textColor="@color/mivyb_dark"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/tvAddBatch"
-        app:layout_constraintTop_toBottomOf="@+id/tvAddBatch" />
-
-    <TextView
-        android:id="@+id/tvDeleteBatch"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:paddingStart="24dp"
-        android:text="@string/Delete_Batch"
-        android:textColor="@color/mivyb_dark"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/tvEditBatch"
-        app:layout_constraintTop_toBottomOf="@+id/tvEditBatch" />
-
-    <TextView
-        android:id="@+id/tvAddBatch"
-        android:layout_width="150dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="5dp"
-        android:paddingStart="24dp"
-        android:text="@string/Add_Batch"
-        android:textColor="@color/mivyb_dark"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/tvMyBatchSetting"
-        app:layout_constraintTop_toBottomOf="@+id/tvMyBatchSetting" />
+        app:layout_constraintTop_toBottomOf="@+id/tvMySchoolSetting" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

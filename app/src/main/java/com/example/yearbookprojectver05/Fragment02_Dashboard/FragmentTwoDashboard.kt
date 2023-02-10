@@ -1,58 +1,124 @@
 package com.example.yearbookprojectver05.Fragment02_Dashboard
 
-import android.app.ProgressDialog
-import android.media.Image
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.yearbookprojectver05.MySectionActivity
 import com.example.yearbookprojectver05.dashboard.Dashboard
 import com.example.yearbookprojectver05.dashboard.DashboardAdapter
-import com.example.yearbookprojectver05.dashboard.DataClassDashboardPosts
+import com.example.yearbookprojectver05.dashboard.DashboardDao
+import com.example.yearbookprojectver05.databinding.ActivityNewItemDashboardBinding
 import com.example.yearbookprojectver05.databinding.FragmentTwoDashboardBinding
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
 class FragmentTwoAppCompat : AppCompatActivity() {
+
     class FragmentTwoDashboard : Fragment() {
 
-        lateinit var binding: FragmentTwoDashboardBinding
-
+        lateinit var binding: ActivityNewItemDashboardBinding
+        var dao = DashboardDao()
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
-            binding = FragmentTwoDashboardBinding.inflate(layoutInflater)
+            binding = ActivityNewItemDashboardBinding.inflate(layoutInflater)
             binding.root
+
+            binding.btnAddItemDashboard.setOnClickListener() {
+                val itemTitle = binding.etItemTitle.toString()
+                val itemDashDescription = binding.etItemDescription.text.toString()
+                val imageDashboardItem = binding.imgDashboardNewItem.toString()
+
+                dao.add(
+                    Dashboard(
+                        itemTitle,
+                        itemDashDescription,
+                        imageDashboardItem
+                    )
+                )
+
+
+//                val intent = Intent(context, FragmentTwoDashboardBinding::class.java)
+//                startActivity(intent)
+            }
         }
+        private fun view() {
+            dao.get().addValueEventListener(object : ValueEventListener {
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        var dashboards: ArrayList<Dashboard> = ArrayList<Dashboard>()
 
-        override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
-        ): View? {
-            var binding = FragmentTwoDashboardBinding.inflate(layoutInflater)
+                        var dataFromDb = snapshot.children
+//                Toast.makeText(applicationContext, ""+dataFromDb, Toast.LENGTH_SHORT).show()
 
+                        for (data in dataFromDb) {
+                            var id = data.key.toString()
+                            var imageDashboardMain = data.child("imageDashboardItem").value.toString()
+                            var itemTitle = data.child("itemDashTitle").value.toString()
+                            var itemDescription = data.child("itemDashDescription").value.toString()
 
-            //data source
-            val dashboardList = mutableListOf<DataClassDashboardPosts>(
-                DataClassDashboardPosts("Image", "Item Title", "Item Description"),
-                DataClassDashboardPosts("Image", "Item Title", "Item Description"),
-                DataClassDashboardPosts("Image", "Item Title", "Item Description"),
-                DataClassDashboardPosts("Image", "Item Title", "Item Description"),
-                DataClassDashboardPosts("Image", "Item Title", "Item Description"),
-                DataClassDashboardPosts("Image", "Item Title", "Item Description")
+                            var dashboard = Dashboard(
+                                imageDashboardMain,
+                                itemTitle,
+                                itemDescription
+                            )
+
+                            dashboards.add(dashboard)
+
+                        }
+
+                        lateinit var binding : FragmentTwoDashboardBinding
+                        binding = FragmentTwoDashboardBinding.inflate(layoutInflater)
+                        val adapter = DashboardAdapter(dashboards)
+                        binding.recyclerViewDashboard.adapter = adapter
+                        binding.recyclerViewDashboard.layoutManager = LinearLayoutManager(activity)
+
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        TODO("Not yet implemented")
+                    }
+                }
             )
-            val adapter = DashboardAdapter(dashboardList)
-
-            binding.RecyvlerViewDashboard.adapter = adapter
-            binding.RecyvlerViewDashboard.layoutManager = LinearLayoutManager(activity)
-
-            return binding.root
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//        override fun onCreateView(
+//            inflater: LayoutInflater, container: ViewGroup?,
+//            savedInstanceState: Bundle?
+//        ): View? {
+//            var binding = FragmentTwoDashboardBinding.inflate(layoutInflater)
+//
+//
+//            //data source
+//            val dashboardList = mutableListOf<DataClassDashboardPosts>(
+//                DataClassDashboardPosts("Image", "Item Title", "Item Description"),
+//                DataClassDashboardPosts("Image", "Item Title", "Item Description"),
+//                DataClassDashboardPosts("Image", "Item Title", "Item Description"),
+//                DataClassDashboardPosts("Image", "Item Title", "Item Description"),
+//                DataClassDashboardPosts("Image", "Item Title", "Item Description"),
+//                DataClassDashboardPosts("Image", "Item Title", "Item Description")
+//            )
+//            val adapter = DashboardAdapter(dashboardList)
+//
+//            binding.recyclerViewDashboard.adapter = adapter
+//            binding.recyclerViewDashboard.layoutManager = LinearLayoutManager(activity)
+//
+//            return binding.root
+//        }
+//    }
+//}

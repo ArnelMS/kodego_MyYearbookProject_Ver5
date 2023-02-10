@@ -3,7 +3,10 @@ package com.example.yearbookprojectver05
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.yearbookprojectver05.Fragment04_Chat.FragmentFourChat
+import com.example.yearbookprojectver05.dashboard.DashboardItemViewActivity
 import com.example.yearbookprojectver05.databinding.ActivityMenuSettingsBinding
+import com.example.yearbookprojectver05.databinding.FragmentHomeBinding
 
 class MenuSettingsActivity : AppCompatActivity()     {
 
@@ -14,14 +17,32 @@ class MenuSettingsActivity : AppCompatActivity()     {
         setContentView(binding.root)
 
 
-        binding.tvProfileSetting.setOnClickListener() {
-            val intent = Intent(this, ProfileSettingActivity::class.java)
+        binding.tvHomeSetting.setOnClickListener() {
+            val intent = Intent(this, FragmentHomeBinding::class.java)
             startActivity(intent)
         }
+        binding.tvNewItemDashboard.setOnClickListener() {
+            val intent = Intent(this, DashboardItemViewActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.tvMyYearbookSetting.setOnClickListener() {
             val intent = Intent(this, ProfileSettingActivity::class.java)
             startActivity(intent)
         }
+        binding.tvChatSetting.setOnClickListener() {
+            val intent = Intent(this, FragmentFourChat::class.java)
+            startActivity(intent)
+        }
+        binding.tvProfileSetting.setOnClickListener() {
+            val intent = Intent(this, ProfileSettingActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
+
+
 //        binding.tvProfileSetting.setOnClickListener() {
 //            supportFragmentManager.beginTransaction().apply {
 //                replace(binding.frameLayout.id, fragmentSixEditProfile)

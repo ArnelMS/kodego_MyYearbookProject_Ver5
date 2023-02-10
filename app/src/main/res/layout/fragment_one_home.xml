@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment01_Home.FragmentOneHome" >
+    tools:context=".Fragment01_Home.FragmentOneHome">
 
     <TextView
         android:id="@+id/tvDashboard"
@@ -22,10 +22,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvWhatIsYourBatch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:text="What is your batch?"
         android:textAlignment="center"
         android:textColor="@color/mivyb_dark"
@@ -34,29 +34,46 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imgSchoolLogo" />
 
     <Spinner
         android:id="@+id/spinnerBatch"
-        android:layout_width="161dp"
-        android:layout_height="48dp"
+        android:layout_width="121dp"
+        android:layout_height="42dp"
+        android:background="#EDEDED"
+        android:backgroundTint="#D1D1D0"
         android:minHeight="50dp"
         android:padding="0dp"
         android:paddingStart="50dp"
         android:scrollbarSize="5dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWhatIsYourBatch" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="281dp"
-        android:layout_height="284dp"
+        android:id="@+id/imgSchoolLogo"
+        android:layout_width="268dp"
+        android:layout_height="249dp"
         android:layout_marginTop="4dp"
         android:src="@drawable/abc_university_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDashboard" />
+
+    <Button
+        android:id="@+id/btnGoToMyYearbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Go to My Yearbook"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerBatch"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

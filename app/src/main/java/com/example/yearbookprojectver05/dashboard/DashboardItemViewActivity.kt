@@ -1,4 +1,4 @@
-package com.example.yearbookprojectver05
+package com.example.yearbookprojectver05.dashboard
 
 import android.Manifest
 import android.app.Activity
@@ -13,9 +13,8 @@ import android.provider.MediaStore
 import android.provider.Settings
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import com.example.yearbookprojectver05.databinding.ActivityProfileSettingBinding
-import com.example.yearbookprojectver05.students.Students
-import com.example.yearbookprojectver05.students.StudentsDao
+import com.example.yearbookprojectver05.Fragment02_Dashboard.FragmentTwoAppCompat
+import com.example.yearbookprojectver05.databinding.ActivityNewItemDashboardBinding
 import com.google.firebase.storage.FirebaseStorage
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.PermissionToken
@@ -28,129 +27,99 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class ProfileSettingActivity : AppCompatActivity() {
+class DashboardItemViewActivity : AppCompatActivity() {
 
-    lateinit var binding : ActivityProfileSettingBinding
-    var dao = StudentsDao()
+    lateinit var binding: ActivityNewItemDashboardBinding
+    var dao = DashboardDao()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityProfileSettingBinding.inflate(layoutInflater)
+        binding = ActivityNewItemDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        binding = FragmentSixEditProfileBinding.inflate(layoutInflater)
-//        binding.root
 
-        binding.btnAddProfile.setOnClickListener() {
+        binding.btnAddItemDashboard.setOnClickListener() {
 
-            val firstName = binding.etFirstName.text.toString()
-            val middleName = binding.etMiddleName.text.toString()
-            val lastName = binding.etLastName.text.toString()
-            val maidenName = binding.etMaidenName.text.toString()
-            val mobile = binding.etMobile.text.toString()
-            val email = binding.etEmail.text.toString()
-            val facebookURL = binding.etFacebookURL.text.toString()
-            val school = binding.etSchool.text.toString()
-            val batch = binding.etFacebookURL.text.toString()
-            val section = binding.etFacebookURL.text.toString()
 
+            val itemTitle = binding.etItemTitle.text.toString()
+            val itemDescription = binding.etItemTitle.text.toString()
 
             // Initialized Photo Storage
             val formatter = SimpleDateFormat("yyyy_MM_dd_HH_mm_sss", Locale.getDefault())
             val now = Date()
-            val filenameNew = "$lastName-new-${formatter.format(now)}"
-            val filenameOld = "$lastName-old-${formatter.format(now)}"
-            val storageReferenceNew =
-                FirebaseStorage.getInstance().getReference("images/$filenameNew")
-            val storageReferenceOld =
-                FirebaseStorage.getInstance().getReference("images/$filenameOld")
-
-            val imageNew = filenameNew
-            val imageOld = filenameOld
+            val filenameNewImg = "$itemTitle-new-${formatter.format(now)}"
+            val storageReferenceNew = FirebaseStorage.getInstance().getReference("images/$filenameNewImg")
+            val imageNew = filenameNewImg
 
 
             // Get the data from an ImageView as bytes - For Pic 1
-            binding.imgProfileNew.isDrawingCacheEnabled = true
-            binding.imgProfileNew.buildDrawingCache()
-            val bitmapNew = (binding.imgProfileNew.drawable as BitmapDrawable).bitmap
+            binding.imgDashboardNewItem.isDrawingCacheEnabled = true
+            binding.imgDashboardNewItem.buildDrawingCache()
+            val bitmapNew = (binding.imgDashboardNewItem.drawable as BitmapDrawable).bitmap
             val baosNew = ByteArrayOutputStream()
             bitmapNew.compress(Bitmap.CompressFormat.JPEG, 100, baosNew)
             val dataNew = baosNew.toByteArray()
 
-            // Get the data from an ImageView as bytes - For Pic 2
-            binding.imgGradPic.isDrawingCacheEnabled = true
-            binding.imgGradPic.buildDrawingCache()
-            val bitmapOLd = (binding.imgGradPic.drawable as BitmapDrawable).bitmap
-            val baosOld = ByteArrayOutputStream()
-            bitmapOLd.compress(Bitmap.CompressFormat.JPEG, 100, baosOld)
-            val dataOld = baosOld.toByteArray()
+//            // Get the data from an ImageView as bytes - For Pic 2
+//            binding.imgGradPic.isDrawingCacheEnabled = true
+//            binding.imgGradPic.buildDrawingCache()
+//            val bitmapOLd = (binding.imgGradPic.drawable as BitmapDrawable).bitmap
+//            val baosOld = ByteArrayOutputStream()
+//            bitmapOLd.compress(Bitmap.CompressFormat.JPEG, 100, baosOld)
+//            val dataOld = baosOld.toByteArray()
 
             // Add report to database
             dao.add(
-                Students(
-                    imageNew, imageOld,
-                    firstName,
-                    middleName,
-                    lastName,
-                    maidenName,
-                    mobile,
-                    email,
-                    facebookURL,
-                    school,
-                    batch,
-                    section
-                )
+                Dashboard(
+                    imageNew, itemTitle,
+                    itemDescription)
+
             )
 
             // Save photo to database
             storageReferenceNew.putBytes(dataNew)
                 .addOnSuccessListener {
-                    binding.imgProfileNew.setImageURI(null) // Removes photo from imageview
+            // Removes photo from imageview
+                binding.imgDashboardNewItem.setImageURI(null)
+                Toast.makeText(applicationContext, "Success!", Toast.LENGTH_SHORT).show()
                 }
-
-
-            storageReferenceOld.putBytes(dataOld)
-                .addOnSuccessListener {
-                    binding.imgGradPic.setImageURI(null) // Removes photo from imageview
-                }
-
-            Toast.makeText(applicationContext, "Success!", Toast.LENGTH_SHORT).show()
         }
 
-
-
-        binding.btnUpdate.setOnClickListener() {
+        binding.btnUpdateItemDashboard.setOnClickListener() {
             updateData()
         }
-        binding.btnDeleteProfile.setOnClickListener() {
+        binding.btnDeleteItemDashboard.setOnClickListener() {
             deleteData()
         }
-        binding.imgProfileNew.setOnClickListener() {
-            val image = "imageNew"
-            showOptions(image)
-        }
-        binding.imgGradPic.setOnClickListener() {
-            val image = "imageGrad"
-            showOptions(image)
-        }
-
-        binding.btnLoad.setOnClickListener() {
-            val intent = Intent(this, MySectionActivity::class.java)
+        binding.btnLoadToDashboard.setOnClickListener() {
+            val intent = Intent(this, FragmentTwoAppCompat.FragmentTwoDashboard::class.java)
             finish()
             startActivity(intent)
         }
+        binding.imgDashboardNewItem.setOnClickListener() {
+            val image = "imageNew"
+            showOptions(image)
+        }
+
+
+//        binding.btnLoad.setOnClickListener() {
+//            val intent = Intent(this, MySectionActivity::class.java)
+//            finish()
+//            startActivity(intent)
+//        }
 
     }
 
 
-    private fun showOptions(imageView : String) {
+    private fun showOptions(imgDashboardNewItem : String) {
         val builder = AlertDialog.Builder(this)
         builder.setMessage("Choose image source")
             .setCancelable(false)
             .setPositiveButton("Open Camera") { dialog, id ->
-                showCamera(imageView)
+                showCamera(imgDashboardNewItem)
             }
             .setNegativeButton("Open Gallery") { dialog, id ->
-                showGallery(imageView)
+                showGallery(imgDashboardNewItem)
             }
 
         val alert = builder.create()
@@ -162,12 +131,11 @@ class ProfileSettingActivity : AppCompatActivity() {
             Manifest.permission.READ_EXTERNAL_STORAGE
         ).withListener(object : PermissionListener {
             override fun onPermissionGranted(p0: PermissionGrantedResponse?) {
-                val galleryIntent =
-                    Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+                val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
                 if(imageGallery == "imageNew") {
                     galleryLauncherNew.launch(galleryIntent)
                 } else {
-                    galleryLauncherOld.launch(galleryIntent)
+                    galleryLauncherNew.launch(galleryIntent)
                 }
 
             }
@@ -199,7 +167,7 @@ class ProfileSettingActivity : AppCompatActivity() {
                 if(imageCamera == "imageNew") {
                     cameraLauncherNew.launch(cameraIntent)
                 } else {
-                    cameraLauncherOld.launch(cameraIntent)
+
                 }
             }
 
@@ -232,40 +200,32 @@ class ProfileSettingActivity : AppCompatActivity() {
         if (result.resultCode == Activity.RESULT_OK) {
             result.data?.extras.let {
                 val image: Bitmap = result.data?.extras?.get("data") as Bitmap
-                binding.imgProfileNew.setImageBitmap(image)
+                binding.imgDashboardNewItem.setImageBitmap(image)
             }
         }
     }
 
-    val cameraLauncherOld = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == Activity.RESULT_OK) {
-            result.data?.extras.let {
-                val image: Bitmap = result.data?.extras?.get("data") as Bitmap
-                binding.imgGradPic.setImageBitmap(image)
-            }
-        }
-    }
 
     val galleryLauncherNew = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             result.data?.let {
                 val selectedImage = result.data?.data
-                binding.imgProfileNew.setImageURI(selectedImage)
+                binding.imgDashboardNewItem.setImageURI(selectedImage)
             }
         }
     }
 
-    val galleryLauncherOld = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == Activity.RESULT_OK) {
-            result.data?.let {
-                val selectedImage = result.data?.data
-                binding.imgGradPic.setImageURI(selectedImage)
-            }
-        }
-    }
+//    val galleryLauncherOld = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+//        if (result.resultCode == Activity.RESULT_OK) {
+//            result.data?.let {
+//                val selectedImage = result.data?.data
+//                binding.imgGradPic.setImageURI(selectedImage)
+//            }
+//        }
+//    }
 
     private fun deleteData() {
-        dao.remove("-NNHtXcN04nN9t2s-oCm")
+        dao.remove("")
     }
 
     private fun updateData() {

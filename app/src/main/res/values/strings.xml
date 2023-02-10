@@ -25,8 +25,12 @@
 
     //MENU SETTINGS
     <string name="Menu">Menu</string>
-    <string name="Profile_Setting">Profile Setting</string>
+    <string name="Home_Setting">Home Setting</string>
+    <string name="My_Dashboard_Settings">Dashboard Setting</string>
+    <string name="New_Item_Dashboard_Settings">Add | Remove Item</string>
     <string name="Yearbook_Setting">Yearbook Setting</string>
+    <string name="Chat_Setting">Chat Setting</string>
+    <string name="Profile_Setting">Profile Setting</string>
 
     <string name="My_School">My School</string>
     <string name="Add_School">Add School</string>

@@ -6,7 +6,7 @@
     android:layout_height="150dp">
 
     <TextView
-        android:id="@+id/tvItemDescription"
+        android:id="@+id/etItemDescription"
         android:layout_width="196dp"
         android:layout_height="78dp"
         android:layout_marginTop="8dp"
@@ -15,11 +15,11 @@
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/tvItemTitle"
-        app:layout_constraintTop_toBottomOf="@+id/tvItemTitle" />
+        app:layout_constraintStart_toStartOf="@+id/etItemTitle"
+        app:layout_constraintTop_toBottomOf="@+id/etItemTitle" />
 
     <TextView
-        android:id="@+id/tvItemTitle"
+        android:id="@+id/etItemTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -28,11 +28,11 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imgDashboardItem"
-        app:layout_constraintTop_toTopOf="@+id/imgDashboardItem" />
+        app:layout_constraintStart_toEndOf="@+id/imgDashboardNewItem"
+        app:layout_constraintTop_toTopOf="@+id/imgDashboardNewItem" />
 
     <ImageView
-        android:id="@+id/imgDashboardItem"
+        android:id="@+id/imgDashboardNewItem"
         android:layout_width="160dp"
         android:layout_height="109dp"
         android:layout_marginStart="16dp"

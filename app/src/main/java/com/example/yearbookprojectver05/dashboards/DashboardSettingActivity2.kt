@@ -1,4 +1,4 @@
-package com.example.yearbookprojectver05
+package com.example.yearbookprojectver05.dashboards
 
 import android.Manifest
 import android.app.Activity
@@ -13,9 +13,11 @@ import android.provider.MediaStore
 import android.provider.Settings
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import com.example.yearbookprojectver05.databinding.ActivityProfileSettingBinding
-import com.example.yearbookprojectver05.students.Students
-import com.example.yearbookprojectver05.students.StudentsDao
+import com.example.yearbookprojectver05.MySectionActivity
+import com.example.yearbookprojectver05.R
+import com.example.yearbookprojectver05.databinding.ActivityDashboardSetting2Binding
+import com.example.yearbookprojectver05.students.Dashboards2
+import com.example.yearbookprojectver05.students.Dashboards2Dao
 import com.google.firebase.storage.FirebaseStorage
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.PermissionToken
@@ -28,17 +30,15 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class ProfileSettingActivity : AppCompatActivity() {
+class DashboardSettingActivity2 : AppCompatActivity() {
 
-    lateinit var binding : ActivityProfileSettingBinding
-    var dao = StudentsDao()
+    lateinit var binding : ActivityDashboardSetting2Binding
+    var dao = Dashboards2Dao()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityProfileSettingBinding.inflate(layoutInflater)
+        binding = ActivityDashboardSetting2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        binding = FragmentSixEditProfileBinding.inflate(layoutInflater)
-//        binding.root
 
         binding.btnAddProfile.setOnClickListener() {
 
@@ -59,10 +59,8 @@ class ProfileSettingActivity : AppCompatActivity() {
             val now = Date()
             val filenameNew = "$lastName-new-${formatter.format(now)}"
             val filenameOld = "$lastName-old-${formatter.format(now)}"
-            val storageReferenceNew =
-                FirebaseStorage.getInstance().getReference("images/$filenameNew")
-            val storageReferenceOld =
-                FirebaseStorage.getInstance().getReference("images/$filenameOld")
+            val storageReferenceNew = FirebaseStorage.getInstance().getReference("images/$filenameNew")
+            val storageReferenceOld = FirebaseStorage.getInstance().getReference("images/$filenameOld")
 
             val imageNew = filenameNew
             val imageOld = filenameOld
@@ -86,7 +84,7 @@ class ProfileSettingActivity : AppCompatActivity() {
 
             // Add report to database
             dao.add(
-                Students(
+                Dashboards2(
                     imageNew, imageOld,
                     firstName,
                     middleName,
@@ -104,13 +102,15 @@ class ProfileSettingActivity : AppCompatActivity() {
             // Save photo to database
             storageReferenceNew.putBytes(dataNew)
                 .addOnSuccessListener {
-                    binding.imgProfileNew.setImageURI(null) // Removes photo from imageview
+                    // Removes photo from imageview
+                    binding.imgProfileNew.setImageURI(null)
                 }
 
 
             storageReferenceOld.putBytes(dataOld)
                 .addOnSuccessListener {
-                    binding.imgGradPic.setImageURI(null) // Removes photo from imageview
+                    // Removes photo from imageview
+                    binding.imgGradPic.setImageURI(null)
                 }
 
             Toast.makeText(applicationContext, "Success!", Toast.LENGTH_SHORT).show()
@@ -162,8 +162,7 @@ class ProfileSettingActivity : AppCompatActivity() {
             Manifest.permission.READ_EXTERNAL_STORAGE
         ).withListener(object : PermissionListener {
             override fun onPermissionGranted(p0: PermissionGrantedResponse?) {
-                val galleryIntent =
-                    Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+                val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
                 if(imageGallery == "imageNew") {
                     galleryLauncherNew.launch(galleryIntent)
                 } else {
