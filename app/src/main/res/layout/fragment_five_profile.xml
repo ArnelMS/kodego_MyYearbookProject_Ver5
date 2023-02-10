@@ -7,15 +7,6 @@
     android:background="#FFFFFF"
     tools:context=".Fragment05_Profile.FragmentFiveProfile">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="90dp"
@@ -121,7 +112,7 @@
         android:id="@+id/textFieldMiddleName"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
         android:hint="@string/Middle_Name"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
@@ -145,16 +136,14 @@
         android:id="@+id/textFieldLastName"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
         android:hint="@string/Last_Name"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName"
+        tools:layout_editor_absoluteX="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etLastName"
@@ -169,7 +158,7 @@
         android:id="@+id/textFieldMaidenName"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
         android:hint="@string/Maiden_Name"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
@@ -193,7 +182,7 @@
         android:id="@+id/textFieldMobile"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="4dp"
         android:hint="@string/Mobile"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
@@ -212,31 +201,6 @@
             android:background="#FAFAFA"
             android:inputType="number"
             android:textColor="#000000" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldEmail"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginTop="8dp"
-        android:hint="@string/Email"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:textColorHint="#000000"
-        app:hintTextColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldMobile">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEmail"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="0dp"
-            android:background="#FAFAFA"
-            android:inputType="textEmailAddress"
-            android:textColor="#000000" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -253,7 +217,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldEmail">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMobile">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etFacebookURL"
@@ -318,6 +282,29 @@
         app:layout_constraintStart_toEndOf="@+id/imgProfileNew"
         app:layout_constraintTop_toBottomOf="@+id/tvEditProfile"
         app:srcCompat="@drawable/add_photo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldEmail"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="@string/Email"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="588dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:background="#FAFAFA"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

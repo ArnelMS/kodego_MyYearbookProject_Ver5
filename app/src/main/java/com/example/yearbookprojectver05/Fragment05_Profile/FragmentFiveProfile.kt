@@ -2,11 +2,11 @@ package com.example.yearbookprojectver05.Fragment05_Profile
 
 import androidx.fragment.app.Fragment
 import com.example.yearbookprojectver05.databinding.FragmentFiveProfileBinding
-import com.example.yearbookprojectver05.students.Dashboards2Dao
+import com.example.yearbookprojectver05.students.StudentsDao
 
 class FragmentFiveProfile : Fragment() {
     lateinit var binding: FragmentFiveProfileBinding
-    var dao = Dashboards2Dao()
+    var dao = StudentsDao()
     }
 //
 //    override fun onCreateView(

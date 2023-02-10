@@ -35,8 +35,9 @@ class StudentDetailActivity : AppCompatActivity() {
         binding.tvLastName2.text = lastName
         binding.tvMobile2.text = mobile
         binding.tvEmail2.text = email
-        binding.tvFacebookURL2.text = facebookUrl
-//
+        binding.tvFacebookUrl2.text = facebookUrl
+
+
 //        binding.tvFirstName2.text = firstName
 //        binding.tvFirstName2.text = firstName
 //        binding.tvFirstName2.text = firstName

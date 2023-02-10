@@ -94,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldFacebookUrl">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldEmail">
         <!--        app:startIconDrawable="@drawable/profile_photo3"-->
 
 
@@ -136,7 +136,7 @@
         android:id="@+id/textFieldSection"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="4dp"
         android:hint="@string/My_Section"
         android:paddingStart="10dp"
         android:paddingTop="3dp"
@@ -208,7 +208,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldLastName"
+        android:id="@+id/textFieldMaidenName"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginTop="3dp"
@@ -220,10 +220,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMobile">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etLastName"
+            android:id="@+id/etMaidenName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="0dp"
@@ -233,22 +233,18 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldMaidenName"
+        android:id="@+id/textFieldLastName"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginTop="3dp"
         android:hint="@string/Maiden_Name"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textFieldMiddleName">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etMaidenName"
+            android:id="@+id/etLastName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="0dp"
@@ -296,7 +292,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldMobile">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldFacebookUrl">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
@@ -322,7 +318,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldEmail">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etFacebookURL"
@@ -349,25 +345,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imgProfileNew"
-        android:layout_width="88dp"
-        android:layout_height="104dp"
-        android:layout_marginStart="4dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/profile_modern"
-        app:layout_constraintStart_toEndOf="@+id/imgGradPic"
-        app:layout_constraintTop_toTopOf="@+id/imgGradPic" />
+        <ImageView
+            android:id="@+id/imgProfileNew"
+            android:layout_width="88dp"
+            android:layout_height="104dp"
+            android:layout_marginStart="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/profile_modern"
+            app:layout_constraintStart_toEndOf="@+id/imgGradPic"
+            app:layout_constraintTop_toTopOf="@+id/imgGradPic" />
 
-    <ImageView
-        android:id="@+id/imgGradPic"
-        android:layout_width="93dp"
-        android:layout_height="105dp"
-        android:layout_marginTop="5dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/profile_gradpic"
-        app:layout_constraintStart_toEndOf="@+id/textFieldFirstName"
-        app:layout_constraintTop_toTopOf="@+id/textFieldFirstName" />
+        <ImageView
+            android:id="@+id/imgGradPic"
+            android:layout_width="93dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/profile_gradpic"
+            app:layout_constraintStart_toEndOf="@+id/textFieldFirstName"
+            app:layout_constraintTop_toTopOf="@+id/textFieldFirstName" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

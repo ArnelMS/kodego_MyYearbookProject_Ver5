@@ -9,16 +9,15 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldSchool"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="50dp"
         android:hint="@string/My_School"
         android:paddingStart="10dp"
         android:paddingTop="10dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldFacebookUrl"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="376dp">
         <!--        app:startIconDrawable="@drawable/profile_photo3"-->
 
 
@@ -33,8 +32,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldBatch"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
         android:hint="@string/My_Batch"
         android:paddingStart="10dp"
         android:paddingTop="5dp"
@@ -42,7 +41,7 @@
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/textFieldSchool"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldSchool">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldEmail">
         <!--        app:startIconDrawable="@drawable/profile_photo3"-->
 
 
@@ -57,7 +56,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldSection"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
         android:hint="@string/My_Section"
         android:paddingStart="10dp"
         android:paddingTop="5dp"
@@ -80,15 +80,15 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldFacebookUrl"
         android:layout_width="410dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:hint="@string/Facebook_URL"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldEmail">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMiddleName">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etFacebookURL"
@@ -103,8 +103,8 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldFirstName"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
         android:hint="@string/First_Name"
         android:paddingStart="10dp"
         android:paddingTop="0dp"
@@ -112,7 +112,7 @@
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/textFieldMiddleName"
-        app:layout_constraintTop_toBottomOf="@+id/tvEditProfile">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldLastName">
         <!--        app:startIconDrawable="@drawable/profile_photo3"-->
 
 
@@ -127,15 +127,15 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldMiddleName"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
         android:hint="@string/Middle_Name"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/textFieldMaidenName"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldFirstName">
+        app:layout_constraintStart_toStartOf="@+id/textFieldLastName"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMobile">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etMiddleName"
@@ -149,15 +149,14 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldLastName"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="50dp"
         android:hint="@string/Last_Name"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/textFieldMobile"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="28dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etLastName"
@@ -171,15 +170,15 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldMaidenName"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/Maiden_Name"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/textFieldLastName"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldMiddleName">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldFacebookUrl">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etMaidenName"
@@ -193,15 +192,13 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldMobile"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
         android:hint="@string/Mobile"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
-        app:hintTextColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/textFieldEmail"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldLastName">
+        app:hintTextColor="#000000">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etMobile"
@@ -216,15 +213,15 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldEmail"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
         android:hint="@string/Email"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/textFieldFacebookUrl"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldMobile">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldSchool">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
@@ -258,8 +255,10 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldSection" />
+        app:layout_constraintTop_toBottomOf="@+id/textFieldSection"
+        app:layout_constraintVertical_bias="0.359" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
