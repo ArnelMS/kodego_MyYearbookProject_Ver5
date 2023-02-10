@@ -4,19 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentOneHome" >
+    tools:context=".Fragment01_Home.FragmentOneHome">
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="408dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="224dp"
-        android:text="HOME"
+        android:id="@+id/tvDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:text="W E L C O M E ! ! !"
         android:textAlignment="center"
-        android:textColor="#F30404"
+        android:textColor="@color/mivyb_dark"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWhatIsYourBatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="What is your batch?"
+        android:textAlignment="center"
+        android:textColor="@color/mivyb_dark"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgSchoolLogo" />
+
+    <Spinner
+        android:id="@+id/spinnerBatch"
+        android:layout_width="121dp"
+        android:layout_height="42dp"
+        android:background="#EDEDED"
+        android:backgroundTint="#D1D1D0"
+        android:minHeight="50dp"
+        android:padding="0dp"
+        android:paddingStart="50dp"
+        android:scrollbarSize="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWhatIsYourBatch" />
+
+    <ImageView
+        android:id="@+id/imgSchoolLogo"
+        android:layout_width="268dp"
+        android:layout_height="249dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/abc_university_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDashboard" />
+
+    <Button
+        android:id="@+id/btnGoToMyYearbook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Go to My Yearbook"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerBatch"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

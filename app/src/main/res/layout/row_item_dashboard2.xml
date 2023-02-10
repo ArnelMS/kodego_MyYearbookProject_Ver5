@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/mivyb_activityBg"
+        android:paddingStart="0dp"
+        android:paddingTop="10dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="285dp"
+            android:layout_marginStart="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/mysection_bg_png" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="400dp"
+            android:layout_height="280dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldMaidenName"
+                android:layout_width="385dp"
+                android:layout_height="36dp"
+                android:hint="@string/Maiden_Name"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#000000"
+                app:hintTextColor="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imgProfileNew"
+                app:layout_constraintTop_toBottomOf="@+id/textFieldLastName">
+
+
+                <TextView
+                    android:id="@+id/tvMaidenName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Maiden_Name"
+                    android:textColor="#4C4C4C"
+                    android:textSize="6sp" />
+
+                <TextView
+                    android:id="@+id/tvMaidenName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#EDF4ED"
+                    android:hint="(if married)"
+                    android:paddingStart="5dp"
+                    android:paddingTop="3dp"
+                    android:text="(If Married)"
+                    android:textColor="#0E0E0E"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldFirstName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="168dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:hint="@string/First_Name"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#000000"
+                app:hintTextColor="#000000"
+                app:layout_constraintStart_toEndOf="@+id/imgGradPic"
+                app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/tvFirstName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/First_Name"
+                    android:textColor="#4C4C4C"
+                    android:textSize="6sp" />
+
+                <TextView
+                    android:id="@+id/tvFirstName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#EDF4ED"
+                    android:paddingStart="5dp"
+                    android:paddingTop="3dp"
+                    android:text="ARNEL"
+                    android:textColor="#0E0E0E"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldMiddleName"
+                android:layout_width="165dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:hint="@string/Middle_Name"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#000000"
+                app:hintTextColor="#000000"
+                app:layout_constraintStart_toStartOf="@+id/textFieldFirstName"
+                app:layout_constraintTop_toBottomOf="@+id/textFieldFirstName">
+
+
+                <TextView
+                    android:id="@+id/tvMiddleName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Middle_Name"
+                    android:textColor="#4C4C4C"
+                    android:textSize="6sp" />
+
+                <TextView
+                    android:id="@+id/tvMiddleName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#EDF4ED"
+                    android:paddingStart="5dp"
+                    android:paddingTop="3dp"
+                    android:text="MENDOZA"
+                    android:textColor="#0E0E0E"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldLastName"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="12dp"
+                android:hint="@string/Last_Name"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#000000"
+                app:hintTextColor="#000000"
+                app:layout_constraintStart_toEndOf="@+id/imgProfileNew"
+                app:layout_constraintTop_toBottomOf="@+id/textFieldMiddleName">
+
+
+                <TextView
+                    android:id="@+id/tvLastName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Last_Name"
+                    android:textColor="#4C4C4C"
+                    android:textSize="6sp" />
+
+                <TextView
+                    android:id="@+id/tvLastName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#EDF4ED"
+                    android:paddingStart="5dp"
+                    android:paddingTop="3dp"
+                    android:text="SEBASTIAN"
+                    android:textColor="#0E0E0E"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/imgProfileNew"
+                android:layout_width="128dp"
+                android:layout_height="127dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/profile_modern" />
+
+            <ImageView
+                android:id="@+id/imgGradPic"
+                android:layout_width="71dp"
+                android:layout_height="86dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@+id/imgProfileNew"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/profile_gradpic" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldFacebookUrl"
+                android:layout_width="380dp"
+                android:layout_height="47dp"
+                android:hint="@string/Facebook_URL"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#000000"
+                app:hintTextColor="#000000"
+                app:layout_constraintStart_toStartOf="@+id/textFieldMaidenName"
+                app:layout_constraintTop_toBottomOf="@+id/textFieldEmail">
+
+
+                <TextView
+                    android:id="@+id/tvFacebookURL1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Facebook_URL"
+                    android:textColor="#4C4C4C"
+                    android:textSize="6sp" />
+
+                <TextView
+                    android:id="@+id/tvFacebookURL2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#EDF4ED"
+                    android:inputType="textWebEditText"
+                    android:paddingStart="5dp"
+                    android:paddingTop="3dp"
+                    android:text="https://web.facebook.com/123456789"
+                    android:textColor="#0E0E0E"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldEmail"
+                android:layout_width="255dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="4dp"
+                android:hint="@string/Email"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#000000"
+                app:hintTextColor="#000000"
+                app:layout_constraintStart_toEndOf="@+id/textFieldMobile"
+                app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">
+
+
+                <TextView
+                    android:id="@+id/tvEmail1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Email"
+                    android:textColor="#4C4C4C"
+                    android:textSize="6sp" />
+
+                <TextView
+                    android:id="@+id/tvEmail2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#EDF4ED"
+                    android:paddingStart="5dp"
+                    android:paddingTop="3dp"
+                    android:text="MyEmailAddress@email.com"
+                    android:textColor="#0E0E0E"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldMobile"
+                android:layout_width="125dp"
+                android:layout_height="35dp"
+                android:hint="@string/Mobile"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp"
+                android:textColorHint="#000000"
+                app:hintTextColor="#000000"
+                app:layout_constraintStart_toStartOf="@+id/imgProfileNew"
+                app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">
+
+
+                <TextView
+                    android:id="@+id/tvMobile1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/Mobile"
+                    android:textColor="#4C4C4C"
+                    android:textSize="6sp" />
+
+                <TextView
+                    android:id="@+id/tvMobile2"
+                    android:layout_width="113dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:background="#EDF4ED"
+                    android:paddingStart="5dp"
+                    android:paddingTop="3dp"
+                    android:text="09991234567"
+                    android:textColor="#0E0E0E"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    //=============================
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <?xml version="1.0" encoding="utf-8"?>-->
+    <!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="300dp"-->
+    <!--android:background="@color/mivyb_activityBg"-->
+    <!--android:backgroundTint="@color/mivyb_activityBg">-->
+
+    <!--<androidx.cardview.widget.CardView-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="390dp"-->
+    <!--    android:layout_marginTop="5dp"-->
+    <!--    android:background="@color/mivyb_activityBg"-->
+    <!--    android:paddingStart="0dp"-->
+    <!--    android:paddingTop="10dp"-->
+    <!--    app:cardCornerRadius="5dp"-->
+    <!--    app:layout_constraintEnd_toEndOf="parent"-->
+    <!--    app:layout_constraintStart_toStartOf="parent"-->
+    <!--    app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imageView6"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="285dp"-->
+    <!--        android:layout_marginStart="1dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:srcCompat="@drawable/mysection_bg_png" />-->
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:layout_width="385dp"-->
+    <!--        android:layout_height="273dp">-->
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+    <!--            android:id="@+id/textFieldFacebookUrl"-->
+    <!--            android:layout_width="380dp"-->
+    <!--            android:layout_height="35dp"-->
+    <!--            android:layout_marginTop="5dp"-->
+    <!--            android:hint="@string/Facebook_URL"-->
+    <!--            android:paddingStart="5dp"-->
+    <!--            android:paddingEnd="10dp"-->
+    <!--            android:textColorHint="#000000"-->
+    <!--            app:hintTextColor="#000000"-->
+    <!--            app:layout_constraintStart_toStartOf="@+id/textFieldMobile"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/textFieldMobile">-->
+
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvFacebookURL1"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/Facebook_URL"-->
+    <!--                android:textColor="#4C4C4C"-->
+    <!--                android:textSize="6sp" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvFacebookURL2"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:background="#EDF4ED"-->
+    <!--                android:inputType="textWebEditText"-->
+    <!--                android:paddingStart="5dp"-->
+    <!--                android:paddingTop="3dp"-->
+    <!--                android:text="https://web.facebook.com/123456789"-->
+    <!--                android:textColor="#0E0E0E"-->
+    <!--                android:textSize="14sp" />-->
+
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+    <!--            android:id="@+id/textFieldEmail"-->
+    <!--            android:layout_width="255dp"-->
+    <!--            android:layout_height="35dp"-->
+    <!--            android:layout_marginStart="4dp"-->
+    <!--            android:layout_marginTop="5dp"-->
+    <!--            android:hint="@string/Email"-->
+    <!--            android:paddingStart="5dp"-->
+    <!--            android:paddingEnd="10dp"-->
+    <!--            android:textColorHint="#000000"-->
+    <!--            app:hintTextColor="#000000"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/textFieldMobile"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">-->
+
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvEmail1"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/Email"-->
+    <!--                android:textColor="#4C4C4C"-->
+    <!--                android:textSize="6sp" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvEmail2"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:background="#EDF4ED"-->
+    <!--                android:paddingStart="5dp"-->
+    <!--                android:paddingTop="3dp"-->
+    <!--                android:text="MyEmailAddress@email.com"-->
+    <!--                android:textColor="#0E0E0E"-->
+    <!--                android:textSize="14sp" />-->
+
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+    <!--            android:id="@+id/textFieldMobile"-->
+    <!--            android:layout_width="125dp"-->
+    <!--            android:layout_height="35dp"-->
+    <!--            android:layout_marginTop="5dp"-->
+    <!--            android:hint="@string/Mobile"-->
+    <!--            android:paddingStart="5dp"-->
+    <!--            android:paddingEnd="10dp"-->
+    <!--            android:textColorHint="#000000"-->
+    <!--            app:hintTextColor="#000000"-->
+    <!--            app:layout_constraintStart_toStartOf="@+id/textFieldMaidenName"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">-->
+
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvMobile1"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="2dp"-->
+    <!--                android:text="@string/Mobile"-->
+    <!--                android:textColor="#4C4C4C"-->
+    <!--                android:textSize="6sp" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvMobile2"-->
+    <!--                android:layout_width="113dp"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginTop="2dp"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:background="#EDF4ED"-->
+    <!--                android:paddingStart="5dp"-->
+    <!--                android:paddingTop="3dp"-->
+    <!--                android:text="09991234567"-->
+    <!--                android:textColor="#0E0E0E"-->
+    <!--                android:textSize="14sp" />-->
+
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+    <!--            android:id="@+id/textFieldMaidenName"-->
+    <!--            android:layout_width="385dp"-->
+    <!--            android:layout_height="36dp"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:hint="@string/Maiden_Name"-->
+    <!--            android:paddingStart="5dp"-->
+    <!--            android:paddingEnd="10dp"-->
+    <!--            android:textColorHint="#000000"-->
+    <!--            app:hintTextColor="#000000"-->
+    <!--            app:layout_constraintStart_toStartOf="@+id/imgProfileNew"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/textFieldLastName">-->
+
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvMaidenName1"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/Maiden_Name"-->
+    <!--                android:textColor="#4C4C4C"-->
+    <!--                android:textSize="6sp" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvMaidenName2"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:background="#EDF4ED"-->
+    <!--                android:hint="(if married)"-->
+    <!--                android:paddingStart="5dp"-->
+    <!--                android:paddingTop="3dp"-->
+    <!--                android:text="(If Married)"-->
+    <!--                android:textColor="#0E0E0E"-->
+    <!--                android:textSize="14sp" />-->
+
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+    <!--            android:id="@+id/textFieldFirstName"-->
+    <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+    <!--            android:layout_width="168dp"-->
+    <!--            android:layout_height="35dp"-->
+    <!--            android:layout_marginStart="4dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:hint="@string/First_Name"-->
+    <!--            android:paddingStart="5dp"-->
+    <!--            android:paddingEnd="10dp"-->
+    <!--            android:textColorHint="#000000"-->
+    <!--            app:hintTextColor="#000000"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/imgGradPic"-->
+    <!--            app:layout_constraintTop_toTopOf="parent">-->
+
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvFirstName1"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/First_Name"-->
+    <!--                android:textColor="#4C4C4C"-->
+    <!--                android:textSize="6sp" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvFirstName2"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:background="#EDF4ED"-->
+    <!--                android:paddingStart="5dp"-->
+    <!--                android:paddingTop="3dp"-->
+    <!--                android:text="ARNEL"-->
+    <!--                android:textColor="#0E0E0E"-->
+    <!--                android:textSize="14sp" />-->
+
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+    <!--            android:id="@+id/textFieldMiddleName"-->
+    <!--            android:layout_width="165dp"-->
+    <!--            android:layout_height="35dp"-->
+    <!--            android:layout_marginTop="16dp"-->
+    <!--            android:hint="@string/Middle_Name"-->
+    <!--            android:paddingStart="5dp"-->
+    <!--            android:paddingEnd="10dp"-->
+    <!--            android:textColorHint="#000000"-->
+    <!--            app:hintTextColor="#000000"-->
+    <!--            app:layout_constraintStart_toStartOf="@+id/textFieldFirstName"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/textFieldFirstName">-->
+
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvMiddleName1"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/Middle_Name"-->
+    <!--                android:textColor="#4C4C4C"-->
+    <!--                android:textSize="6sp" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvMiddleName2"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:background="#EDF4ED"-->
+    <!--                android:paddingStart="5dp"-->
+    <!--                android:paddingTop="3dp"-->
+    <!--                android:text="MENDOZA"-->
+    <!--                android:textColor="#0E0E0E"-->
+    <!--                android:textSize="14sp" />-->
+
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+    <!--            android:id="@+id/textFieldLastName"-->
+    <!--            android:layout_width="250dp"-->
+    <!--            android:layout_height="35dp"-->
+    <!--            android:layout_marginStart="4dp"-->
+    <!--            android:layout_marginTop="4dp"-->
+    <!--            android:hint="@string/Last_Name"-->
+    <!--            android:paddingStart="5dp"-->
+    <!--            android:paddingEnd="10dp"-->
+    <!--            android:textColorHint="#000000"-->
+    <!--            app:hintTextColor="#000000"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/imgProfileNew"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/textFieldMiddleName">-->
+
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvLastName1"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/Last_Name"-->
+    <!--                android:textColor="#4C4C4C"-->
+    <!--                android:textSize="6sp" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvLastName2"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:background="#EDF4ED"-->
+    <!--                android:paddingStart="5dp"-->
+    <!--                android:paddingTop="3dp"-->
+    <!--                android:text="SEBASTIAN"-->
+    <!--                android:textColor="#0E0E0E"-->
+    <!--                android:textSize="14sp" />-->
+
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/imgProfileNew"-->
+    <!--            android:layout_width="128dp"-->
+    <!--            android:layout_height="127dp"-->
+    <!--            android:layout_marginStart="8dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:srcCompat="@drawable/profile_modern" />-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/imgGradPic"-->
+    <!--            android:layout_width="71dp"-->
+    <!--            android:layout_height="86dp"-->
+    <!--            android:layout_marginStart="12dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/imgProfileNew"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:srcCompat="@drawable/profile_gradpic" />-->
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--</androidx.cardview.widget.CardView>-->
+
+    <!--//=============================-->
+
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--</androidx.constraintlayout.widget.ConstraintLayout>-->

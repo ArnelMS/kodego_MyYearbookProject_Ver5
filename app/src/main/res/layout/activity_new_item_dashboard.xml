@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.DashboardItemViewActivity">
+
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="379dp"
+        android:layout_height="219dp"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etItemTitle">
+
+        <EditText
+            android:id="@+id/etItemDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:gravity="top|left"
+            android:hint="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/etItemTitle"
+        android:layout_width="413dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="32dp"
+        android:hint="Enter event title here!"
+        android:maxLines="1"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgDashboardNewItem" />
+
+
+    <ImageView
+        android:id="@+id/imgDashboardNewItem"
+        android:layout_width="324dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <Button
+        android:id="@+id/btnAddItemDashboard"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:text="Add Item"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+
+    <Button
+        android:id="@+id/btnDeleteItemDashboard"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Delete ITem"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnUpdateItemDashboard"
+        app:layout_constraintStart_toEndOf="@+id/btnUpdateItemDashboard"
+        app:layout_constraintTop_toTopOf="@+id/btnUpdateItemDashboard" />
+
+    <Button
+        android:id="@+id/btnLoadToDashboard"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Load to Dashboard"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/btnUpdateItemDashboard"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpdateItemDashboard" />
+
+    <Button
+        android:id="@+id/btnUpdateItemDashboard"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Edit Item"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAddItemDashboard"
+        app:layout_constraintStart_toEndOf="@+id/btnAddItemDashboard"
+        app:layout_constraintTop_toTopOf="@+id/btnAddItemDashboard"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imgDashboardNewItem"
+        app:layout_constraintEnd_toEndOf="@+id/imgDashboardNewItem"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="@+id/imgDashboardNewItem"
+        app:layout_constraintTop_toTopOf="@+id/imgDashboardNewItem"
+        app:layout_constraintVertical_bias="0.934"
+        app:srcCompat="@drawable/add_photo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

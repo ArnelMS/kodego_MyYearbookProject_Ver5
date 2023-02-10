@@ -4,19 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentTwoDashboard">
+    tools:context=".Fragment02_Dashboard.FragmentTwoAppCompat">
+
+    <!--        tools:listitem="@layout/event_item_row" -->
+
+    <!--        tools:listitem="@layout/user_event_row" />-->
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="194dp"
-        android:layout_height="109dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="296dp"
-        android:text="DASHBOARD"
-        android:textColor="#1049D6"
-        android:textSize="24sp"
+        android:id="@+id/tvDashboard"
+        android:layout_width="165dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:text="Dashboard"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="549dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDashboard" />
+
+    <EditText
+        android:id="@+id/searchEt"
+        android:layout_width="218dp"
+        android:layout_height="41dp"
+        android:drawableStart="@drawable/search_icon"
+        android:hint="Search"
+        android:paddingStart="0dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvDashboard"
+        app:layout_constraintTop_toTopOf="@+id/tvDashboard">
+
+    </EditText>
+
+
+    <Button
+        android:id="@+id/btnAddItemDashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Add Item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewDashboard" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 

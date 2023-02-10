@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateProfileActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldSchool"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/My_School"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldFacebookUrl"
+        tools:layout_editor_absoluteX="0dp">
+        <!--        app:startIconDrawable="@drawable/profile_photo3"-->
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSchool"
+            android:layout_width="364dp"
+            android:layout_height="match_parent"
+            android:background="#FAFAFA"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldBatch"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/My_Batch"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textFieldSchool"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldSchool">
+        <!--        app:startIconDrawable="@drawable/profile_photo3"-->
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etBatch"
+            android:layout_width="364dp"
+            android:layout_height="match_parent"
+            android:background="#FAFAFA"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldSection"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="@string/My_Section"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textFieldBatch"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldBatch">
+        <!--        app:startIconDrawable="@drawable/profile_photo3"-->
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSection"
+            android:layout_width="364dp"
+            android:layout_height="match_parent"
+            android:background="#FAFAFA"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldFacebookUrl"
+        android:layout_width="410dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/Facebook_URL"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFacebookURL"
+            android:layout_width="364dp"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:background="#FAFAFA"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/First_Name"
+        android:paddingStart="10dp"
+        android:paddingTop="0dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textFieldMiddleName"
+        app:layout_constraintTop_toBottomOf="@+id/tvEditProfile">
+        <!--        app:startIconDrawable="@drawable/profile_photo3"-->
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFirstName"
+            android:layout_width="364dp"
+            android:layout_height="match_parent"
+            android:background="#FAFAFA"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldMiddleName"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/Middle_Name"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textFieldMaidenName"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldFirstName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMiddleName"
+            android:layout_width="364dp"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:background="#FAFAFA"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldLastName"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/Last_Name"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textFieldMobile"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etLastName"
+            android:layout_width="364dp"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:background="#FAFAFA"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldMaidenName"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/Maiden_Name"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textFieldLastName"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMiddleName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMaidenName"
+            android:layout_width="364dp"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:background="#FAFAFA"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldMobile"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/Mobile"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textFieldEmail"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldLastName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMobile"
+            android:layout_width="364dp"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:background="#FAFAFA"
+            android:inputType="number"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldEmail"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:hint="@string/Email"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textFieldFacebookUrl"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMobile">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="364dp"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:background="#FAFAFA"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="UPDATE PROFILE"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="176dp"
+        android:layout_height="52dp"
+        android:text="Update"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldSection" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
