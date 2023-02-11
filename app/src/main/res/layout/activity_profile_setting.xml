@@ -7,6 +7,17 @@
     android:background="@color/mivyb_activityBg"
     tools:context=".ProfileSettingActivity">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="84dp"
+        android:layout_height="15dp"
+        android:text="GradPic"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgGradPic"
+        app:layout_constraintStart_toStartOf="@+id/imgGradPic"
+        app:layout_constraintTop_toBottomOf="@+id/imgGradPic" />
+
     <Button
         android:id="@+id/btnUpdate"
         android:layout_width="90dp"
@@ -48,7 +59,7 @@
         android:id="@+id/btnAddProfile"
         android:layout_width="90dp"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:background="#230202"
         android:backgroundTint="#351111"
         android:foregroundTint="#BB0FEA"
@@ -60,7 +71,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textFieldSection"
         app:layout_constraintTop_toBottomOf="@+id/textFieldSection"
-        app:layout_constraintVertical_bias="0.089"
+        app:layout_constraintVertical_bias="0.09"
         app:rippleColor="@color/mivyb_tertiary" />
 
     <Button
@@ -84,17 +95,15 @@
         android:id="@+id/textSchool"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/My_School"
         android:paddingStart="10dp"
         android:paddingTop="3dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldEmail">
+        app:layout_constraintStart_toStartOf="@+id/textFieldFacebookUrl"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldFacebookUrl">
         <!--        app:startIconDrawable="@drawable/profile_photo3"-->
 
 
@@ -111,14 +120,14 @@
         android:id="@+id/textBatch"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/My_Batch"
         android:paddingStart="10dp"
         android:paddingTop="3dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textSchool"
         app:layout_constraintTop_toBottomOf="@+id/textSchool">
         <!--        app:startIconDrawable="@drawable/profile_photo3"-->
 
@@ -136,7 +145,7 @@
         android:id="@+id/textFieldSection"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/My_Section"
         android:paddingStart="10dp"
         android:paddingTop="3dp"
@@ -161,7 +170,7 @@
         android:id="@+id/textFieldFirstName"
         android:layout_width="215dp"
         android:layout_height="55dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/First_Name"
         android:paddingStart="10dp"
         android:paddingTop="5dp"
@@ -186,6 +195,7 @@
         android:id="@+id/textFieldMiddleName"
         android:layout_width="215dp"
         android:layout_height="55dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/Middle_Name"
         android:paddingStart="10dp"
         android:paddingTop="5dp"
@@ -211,16 +221,14 @@
         android:id="@+id/textFieldMaidenName"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/Last_Name"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldMobile">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMiddleName"
+        tools:layout_editor_absoluteX="0dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etMaidenName"
@@ -236,12 +244,14 @@
         android:id="@+id/textFieldLastName"
         android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/Maiden_Name"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldMiddleName">
+        app:layout_constraintStart_toStartOf="@+id/textFieldMaidenName"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etLastName"
@@ -257,15 +267,13 @@
         android:id="@+id/textFieldMobile"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/Mobile"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textFieldLastName"
         app:layout_constraintTop_toBottomOf="@+id/textFieldLastName">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -283,16 +291,14 @@
         android:id="@+id/textFieldEmail"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/Email"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldFacebookUrl">
+        app:layout_constraintStart_toStartOf="@+id/textFieldMobile"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMobile">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
@@ -309,16 +315,14 @@
         android:id="@+id/textFieldFacebookUrl"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/Facebook_URL"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">
+        app:layout_constraintStart_toStartOf="@+id/textFieldEmail"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldEmail">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etFacebookURL"
@@ -337,7 +341,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="UPDATE MY YEARBOOK"
+        android:text="MY YEARBOOK SETTINGS"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -345,25 +349,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/imgProfileNew"
-            android:layout_width="88dp"
-            android:layout_height="104dp"
-            android:layout_marginStart="4dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/profile_modern"
-            app:layout_constraintStart_toEndOf="@+id/imgGradPic"
-            app:layout_constraintTop_toTopOf="@+id/imgGradPic" />
+    <ImageView
+        android:id="@+id/imgProfileNew"
+        android:layout_width="86dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile_modern"
+        app:layout_constraintStart_toEndOf="@+id/textFieldFirstName"
+        app:layout_constraintTop_toTopOf="@+id/textFieldFirstName" />
 
-        <ImageView
-            android:id="@+id/imgGradPic"
-            android:layout_width="93dp"
-            android:layout_height="105dp"
-            android:layout_marginTop="5dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/profile_gradpic"
-            app:layout_constraintStart_toEndOf="@+id/textFieldFirstName"
-            app:layout_constraintTop_toTopOf="@+id/textFieldFirstName" />
+    <ImageView
+        android:id="@+id/imgGradPic"
+        android:layout_width="81dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="4dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile_gradpic"
+        app:layout_constraintStart_toEndOf="@+id/imgProfileNew"
+        app:layout_constraintTop_toTopOf="@+id/imgProfileNew" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="84dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="2dp"
+        android:text="Latest Photo"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imgProfileNew"
+        app:layout_constraintStart_toStartOf="@+id/imgProfileNew"
+        app:layout_constraintTop_toBottomOf="@+id/imgProfileNew" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

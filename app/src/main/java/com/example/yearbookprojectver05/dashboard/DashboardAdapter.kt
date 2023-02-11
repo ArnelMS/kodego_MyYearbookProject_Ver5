@@ -11,7 +11,7 @@ import com.google.firebase.storage.FirebaseStorage
 import java.io.File
 
 
-class DashboardAdapter(val dashboardModel:MutableList<Dashboard>):RecyclerView.Adapter<DashboardAdapter.DashboardViewHolder>() {
+class DashboardAdapter(val dashboard:MutableList<Dashboard>):RecyclerView.Adapter<DashboardAdapter.DashboardViewHolder>() {
 
     inner class DashboardViewHolder( val binding: RowItemDashboardBinding):RecyclerView.ViewHolder(binding.root)
 
@@ -22,12 +22,14 @@ class DashboardAdapter(val dashboardModel:MutableList<Dashboard>):RecyclerView.A
     }
     override fun onBindViewHolder(holder: DashboardViewHolder, position: Int) {
         holder.binding.apply {
+            etItemTitle.text = dashboard[position].itemDashTitle
+            etItemDescription.text = dashboard[position].itemDashTitle
 
-            if(dashboardModel[position].imageDashboardItem == "") {
+            if(dashboard[position].imageDashboardItem == "") {
                 imgDashboardNewItem.setImageResource(R.drawable.profile_modern)
             } else {
                 // Retrieve Image
-                val imageName = dashboardModel[position].imageDashboardItem
+                val imageName = dashboard[position].imageDashboardItem
                 val storageRef = FirebaseStorage.getInstance().reference.child("images/$imageName")
                 val localFile = File.createTempFile("tempImage","jpg")
                 storageRef.getFile(localFile)
@@ -36,16 +38,12 @@ class DashboardAdapter(val dashboardModel:MutableList<Dashboard>):RecyclerView.A
                         imgDashboardNewItem.setImageBitmap(bitmap)
                     }
             }
-
-            etItemTitle.text = dashboardModel[position].itemDashTitle
-            etItemDescription.text = dashboardModel[position].itemDashTitle
-
             return
         }
     }
 
     override fun getItemCount(): Int {
-        return dashboardModel.size
+        return dashboard.size
     }
 
 

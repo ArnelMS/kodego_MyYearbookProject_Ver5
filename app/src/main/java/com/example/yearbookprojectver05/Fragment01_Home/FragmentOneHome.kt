@@ -21,6 +21,10 @@ import androidx.core.content.ContextCompat.startActivity
 import com.example.yearbookprojectver05.R
 import com.example.yearbookprojectver05.databinding.FragmentOneHomeBinding
 import com.example.yearbookprojectver05.databinding.FragmentThreeMyYearbookBinding
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.PermissionToken
@@ -53,21 +57,43 @@ class FragmentOneHome : Fragment() {
         binding = FragmentOneHomeBinding.inflate(layoutInflater)
         binding.imgSchoolLogo.setOnClickListener() {
         }
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-            val batchData =
-                arrayListOf<String>("1991", "1992", "1993", "1994", "1995", "1996", "1997",)
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        val batchData =
+            arrayListOf<String>("1991", "1992", "1993", "1994", "1995", "1996", "1997",)
 
 
-            val adapterParent = ArrayAdapter(requireContext(), R.layout.batchtextviewxml, batchData)
-            binding.spinnerBatch.adapter = adapterParent
+        val adapterParent = ArrayAdapter(requireContext(), R.layout.batchtextviewxml, batchData)
+        binding.spinnerBatch.adapter = adapterParent
 
-            binding.btnGoToMyYearbook.setOnClickListener() {
-                val spinnerItem = binding.spinnerBatch.selectedItem.toString()
-                Toast.makeText(context, spinnerItem, Toast.LENGTH_SHORT).show()
+        binding.btnGoToMyYearbook.setOnClickListener() {
+            val spinnerItem = binding.spinnerBatch.selectedItem.toString()
+            Toast.makeText(context, spinnerItem, Toast.LENGTH_SHORT).show()
 
-            }
-            return binding.root
         }
-}
+        return binding.root
+    }
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//    private fun retrieveBatch() {
+//        val batchRef = FirebaseDatabase.getInstance().getReference().child("Batches")
+//        batchRef.addValueEventListener(object : ValueEventListener {
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                if (binding.btnGoToMyYearbook.text.toString() == "") {
+//                    mbatch?.clear()
+//
+//                    for (snapshot in dataSnapshot.children) {
+//                        val batch = snapshot.getValue(User::class.java)
+//                        if (batch != null) {
+//                            mbatch?.add(batch)
+//                        }
+//                    }
+//                    userAdapter?.notifyDataSetChanged()
+//                }
+//            }
+//
+//            override fun onCancelled(p0: DatabaseError) {
+//            }
+//        })
+//    }
+}

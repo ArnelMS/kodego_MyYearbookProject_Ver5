@@ -2,15 +2,15 @@ package com.example.yearbookprojectver05
 
 import android.app.Dialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.yearbookprojectver05.Fragment01_Home.FragmentOneHome
-import com.example.yearbookprojectver05.Fragment02_Dashboard.FragmentTwoAppCompat
 import com.example.yearbookprojectver05.Fragment03_MyYearbook.FragmentThreeMyYearbook
 import com.example.yearbookprojectver05.Fragment04_Chat.FragmentFourChat
 import com.example.yearbookprojectver05.Fragment05_Profile.FragmentFiveProfile
 import com.example.yearbookprojectver05.databinding.ActivityMainBinding
 import com.example.yearbookprojectver05.databinding.CustomDialog01Binding
+import com.example.yearbookprojectver05.ui.dashboard.DashboardFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val fragmentOneHome = FragmentOneHome()
-        val fragmentTwoDashboard = FragmentTwoAppCompat.FragmentTwoDashboard()
+        val fragmentTwoDashboard = DashboardFragment.FragmentTwoDashboard()
         val fragmentThreeMyYearbook = FragmentThreeMyYearbook()
         val fragmentFourChat = FragmentFourChat()
         val fragmentFiveProfile = FragmentFiveProfile()

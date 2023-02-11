@@ -360,8 +360,8 @@ android:backgroundTint="@color/mivyb_activityBg">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textFieldFacebookUrl"
-            android:layout_width="380dp"
-            android:layout_height="35dp"
+            android:layout_width="384dp"
+            android:layout_height="36dp"
             android:layout_marginTop="5dp"
             android:hint="@string/Facebook_URL"
             android:paddingStart="5dp"

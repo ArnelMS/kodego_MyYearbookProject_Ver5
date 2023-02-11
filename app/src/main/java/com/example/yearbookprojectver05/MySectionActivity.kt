@@ -13,7 +13,8 @@ import com.google.firebase.database.ValueEventListener
 
 class MySectionActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMySectionBinding
+
+    lateinit var binding : ActivityMySectionBinding
     var dao = StudentsDao()
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMySectionBinding.inflate(layoutInflater)

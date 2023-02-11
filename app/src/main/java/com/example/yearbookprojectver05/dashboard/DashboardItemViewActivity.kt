@@ -13,7 +13,7 @@ import android.provider.MediaStore
 import android.provider.Settings
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import com.example.yearbookprojectver05.Fragment02_Dashboard.FragmentTwoAppCompat
+import com.example.yearbookprojectver05.Fragment02_Dashboard.FragmentTwoDashboard
 import com.example.yearbookprojectver05.databinding.ActivityNewItemDashboardBinding
 import com.google.firebase.storage.FirebaseStorage
 import com.karumi.dexter.Dexter
@@ -91,11 +91,11 @@ class DashboardItemViewActivity : AppCompatActivity() {
         binding.btnDeleteItemDashboard.setOnClickListener() {
             deleteData()
         }
-        binding.btnLoadToDashboard.setOnClickListener() {
-            val intent = Intent(this, FragmentTwoAppCompat.FragmentTwoDashboard::class.java)
-            finish()
-            startActivity(intent)
-        }
+//        binding.btnLoadToDashboard.setOnClickListener() {
+//            val intent = Intent(this, fragment::class.java)
+//            finish()
+//            startActivity(intent)
+//        }
         binding.imgDashboardNewItem.setOnClickListener() {
             val image = "imageNew"
             showOptions(image)

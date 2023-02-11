@@ -14,6 +14,7 @@ class StudentDetailActivity : AppCompatActivity() {
         binding = ActivityStudentDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // data from home activity
         var imageProfile:Int = intent.getIntExtra("imageNew",0)
         var imageOld:Int = intent.getIntExtra("imageOld",0)
         var firstName:String? = intent.getStringExtra("firstName")

@@ -41,7 +41,6 @@ class ProfileSettingActivity : AppCompatActivity() {
 //        binding.root
 
         binding.btnAddProfile.setOnClickListener() {
-
             val firstName = binding.etFirstName.text.toString()
             val middleName = binding.etMiddleName.text.toString()
             val lastName = binding.etLastName.text.toString()
@@ -119,10 +118,10 @@ class ProfileSettingActivity : AppCompatActivity() {
 
 
         binding.btnUpdate.setOnClickListener() {
-            updateData()
+            showBuiltInDialogUpdate()
         }
         binding.btnDeleteProfile.setOnClickListener() {
-            deleteData()
+            showBuiltInDialogDelete()
         }
         binding.imgProfileNew.setOnClickListener() {
             val image = "imageNew"
@@ -139,6 +138,25 @@ class ProfileSettingActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+    }
+    private fun showBuiltInDialogUpdate() {
+        AlertDialog.Builder(this)
+            .setMessage("Are you sure you want to Update?")
+            .setPositiveButton("YES") { dialog, item ->
+                deleteData()
+            }.setNegativeButton("Cancel") { dialog, item ->
+                dialog.dismiss()
+            }.show()
+    }
+
+    private fun showBuiltInDialogDelete() {
+        AlertDialog.Builder(this)
+            .setMessage("Are you sure you want to Delete?")
+            .setPositiveButton("YES") { dialog, item ->
+                updateData()
+            }.setNegativeButton("Cancel") { dialog, item ->
+                dialog.dismiss()
+            }.show()
     }
 
 
@@ -269,5 +287,8 @@ class ProfileSettingActivity : AppCompatActivity() {
     }
 
     private fun updateData() {
+        var mapData = mutableMapOf<String,String>()
+        mapData["name"]=""
+        dao.update("",mapData)
     }
 }
