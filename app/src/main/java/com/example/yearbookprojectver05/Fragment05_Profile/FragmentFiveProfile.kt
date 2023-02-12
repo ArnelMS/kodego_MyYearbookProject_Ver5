@@ -5,16 +5,41 @@ import com.example.yearbookprojectver05.databinding.FragmentFiveProfileBinding
 import com.example.yearbookprojectver05.students.StudentsDao
 
 class FragmentFiveProfile : Fragment() {
+
     lateinit var binding: FragmentFiveProfileBinding
     var dao = StudentsDao()
     }
-//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //    override fun onCreateView(
 //        inflater: LayoutInflater, container: ViewGroup?,
 //        savedInstanceState: Bundle?
 //    ): View? {
 //        binding = FragmentFiveProfileBinding.inflate(layoutInflater)
-
+//
 //
 //        fun getProfile() {
 //            dao.get().addValueEventListener(object : ValueEventListener {

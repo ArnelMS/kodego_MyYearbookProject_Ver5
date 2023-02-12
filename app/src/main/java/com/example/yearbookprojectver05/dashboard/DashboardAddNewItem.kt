@@ -13,7 +13,8 @@ import android.provider.MediaStore
 import android.provider.Settings
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import com.example.yearbookprojectver05.databinding.ActivityAddItemDashboardBinding
+import com.example.yearbookprojectver05.R
+import com.example.yearbookprojectver05.databinding.ActivityDashboardAddNewItemBinding
 import com.google.firebase.storage.FirebaseStorage
 import com.karumi.dexter.Dexter
 import com.karumi.dexter.PermissionToken
@@ -26,14 +27,13 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class DashboardItemViewActivity : AppCompatActivity() {
+class DashboardAddNewItem : AppCompatActivity() {
 
-    lateinit var binding: ActivityAddItemDashboardBinding
+    lateinit var binding : ActivityDashboardAddNewItemBinding
     var dao = DashboardDao()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAddItemDashboardBinding.inflate(layoutInflater)
+        binding = ActivityDashboardAddNewItemBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -76,9 +76,9 @@ class DashboardItemViewActivity : AppCompatActivity() {
             // Save photo to database
             storageReferenceNew.putBytes(dataNew)
                 .addOnSuccessListener {
-            // Removes photo from imageview
-                binding.imgDashboardNewItem.setImageURI(null)
-                Toast.makeText(applicationContext, "Success!", Toast.LENGTH_SHORT).show()
+                    // Removes photo from imageview
+                    binding.imgDashboardNewItem.setImageURI(null)
+                    Toast.makeText(applicationContext, "Success!", Toast.LENGTH_SHORT).show()
                 }
         }
 

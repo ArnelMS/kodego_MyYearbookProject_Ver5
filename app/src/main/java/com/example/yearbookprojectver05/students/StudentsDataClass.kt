@@ -10,7 +10,7 @@ data class StudentsDataClass (
     val mobile: Long,
     val email: String,
     val facebookURL: String,
+    val school: String,
     val batch: String,
-    val section: String,
-    val school: String)
+    val section: String)
 

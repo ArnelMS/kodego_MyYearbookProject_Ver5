@@ -9,7 +9,7 @@ class DashboardDao {
     var dbReference: DatabaseReference = Firebase.database.reference
 
     fun add(dashboard: Dashboard) {
-        dbReference.push().setValue(dashboard)
+        dbReference.child("Dashboard").push().setValue(dashboard)
     }
 
     fun get(): Query {

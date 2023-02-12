@@ -5,260 +5,403 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".UpdateProfileActivity">
-
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldSchool"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="@string/My_School"
-        android:paddingStart="10dp"
+        android:id="@+id/textFieldItemSummary"
+        android:layout_width="201dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/Middle_Name"
+        android:paddingStart="20dp"
         android:paddingTop="10dp"
-        android:paddingEnd="10dp"
+        android:paddingEnd="20dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="376dp">
-        <!--        app:startIconDrawable="@drawable/profile_photo3"-->
+        app:layout_constraintStart_toStartOf="@+id/textFieldFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldFirstName">
 
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etSchool"
-            android:layout_width="364dp"
+        <TextView
+            android:id="@+id/tvMiddleName1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Middle_Name"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvMiddleName2"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FAFAFA"
-            android:textColor="#000000" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldBatch"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="4dp"
-        android:hint="@string/My_Batch"
-        android:paddingStart="10dp"
-        android:paddingTop="5dp"
-        android:paddingEnd="10dp"
-        android:textColorHint="#000000"
-        app:hintTextColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/textFieldSchool"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldEmail">
-        <!--        app:startIconDrawable="@drawable/profile_photo3"-->
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etBatch"
-            android:layout_width="364dp"
-            android:layout_height="match_parent"
-            android:background="#FAFAFA"
-            android:textColor="#000000" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldSection"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="4dp"
-        android:hint="@string/My_Section"
-        android:paddingStart="10dp"
-        android:paddingTop="5dp"
-        android:paddingEnd="10dp"
-        android:textColorHint="#000000"
-        app:hintTextColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/textFieldBatch"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldBatch">
-        <!--        app:startIconDrawable="@drawable/profile_photo3"-->
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etSection"
-            android:layout_width="364dp"
-            android:layout_height="match_parent"
-            android:background="#FAFAFA"
-            android:textColor="#000000" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldFacebookUrl"
-        android:layout_width="410dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:hint="@string/Facebook_URL"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:textColorHint="#000000"
-        app:hintTextColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldMiddleName">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etFacebookURL"
-            android:layout_width="364dp"
-            android:layout_height="match_parent"
-            android:layout_margin="0dp"
-            android:background="#FAFAFA"
-            android:inputType="textEmailAddress"
-            android:textColor="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldFirstName"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="4dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="199dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
         android:hint="@string/First_Name"
-        android:paddingStart="10dp"
-        android:paddingTop="0dp"
-        android:paddingEnd="10dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/textFieldMiddleName"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldLastName">
-        <!--        app:startIconDrawable="@drawable/profile_photo3"-->
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etFirstName"
-            android:layout_width="364dp"
+        <TextView
+            android:id="@+id/tvFirstName1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/First_Name"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvFirstName2"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FAFAFA"
-            android:textColor="#000000" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldMiddleName"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="4dp"
-        android:hint="@string/Middle_Name"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:textColorHint="#000000"
-        app:hintTextColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/textFieldLastName"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldMobile">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etMiddleName"
-            android:layout_width="364dp"
-            android:layout_height="match_parent"
-            android:layout_margin="0dp"
-            android:background="#FAFAFA"
-            android:textColor="#000000" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldLastName"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="@string/Last_Name"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:textColorHint="#000000"
-        app:hintTextColor="#000000"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="28dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etLastName"
-            android:layout_width="364dp"
-            android:layout_height="match_parent"
-            android:layout_margin="0dp"
-            android:background="#FAFAFA"
-            android:textColor="#000000" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldMaidenName"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:hint="@string/Maiden_Name"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:textColorHint="#000000"
-        app:hintTextColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/textFieldLastName"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldFacebookUrl">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etMaidenName"
-            android:layout_width="364dp"
-            android:layout_height="match_parent"
-            android:layout_margin="0dp"
-            android:background="#FAFAFA"
-            android:textColor="#000000" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldMobile"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="4dp"
-        android:hint="@string/Mobile"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:textColorHint="#000000"
-        app:hintTextColor="#000000">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etMobile"
-            android:layout_width="364dp"
-            android:layout_height="match_parent"
-            android:layout_margin="0dp"
-            android:background="#FAFAFA"
-            android:inputType="number"
-            android:textColor="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldEmail"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="4dp"
-        android:hint="@string/Email"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/Last_Name"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMobile"
+        tools:layout_editor_absoluteX="5dp">
+
+
+        <TextView
+            android:id="@+id/tvEmail1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Email"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvEmail2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imgGradPic"
+        android:layout_width="94dp"
+        android:layout_height="102dp"
+        app:layout_constraintStart_toEndOf="@+id/imgProfileNew"
+        app:layout_constraintTop_toTopOf="@+id/imgProfileNew"
+        app:srcCompat="@drawable/profile_gradpic" />
+
+    <ImageView
+        android:id="@+id/imgProfileNew"
+        android:layout_width="93dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textFieldFirstName"
+        app:layout_constraintTop_toTopOf="@+id/textFieldFirstName"
+        app:srcCompat="@drawable/profile_modern" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldMaidenName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/Last_Name"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textFieldItemSummary"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldItemSummary">
+
+
+        <TextView
+            android:id="@+id/tvLastName1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Last_Name"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvLastName2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldLastName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/Last_Name"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textFieldItemDescription"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">
+
+
+        <TextView
+            android:id="@+id/tvMaidenName1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Maiden_Name"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvMaidenName2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldMobile"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/Last_Name"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textFieldItemDescription"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldLastName">
+
+
+        <TextView
+            android:id="@+id/tvMobile1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Mobile"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvMobile2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldFacebookUrl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/Last_Name"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textFieldEmail"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldEmail">
+
+
+        <TextView
+            android:id="@+id/tvFacebookUrl1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Facebook_URL"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvFacebookUrl2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldSchool"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/Last_Name"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/textFieldFacebookUrl"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldSchool">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldFacebookUrl">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEmail"
-            android:layout_width="364dp"
+
+        <TextView
+            android:id="@+id/tvSchool1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="School"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvSchool2"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="0dp"
-            android:background="#FAFAFA"
-            android:inputType="textEmailAddress"
-            android:textColor="#000000" />
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tvEditProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="UPDATE PROFILE"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldBatch"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/Last_Name"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textFieldSchool">
+
+
+        <TextView
+            android:id="@+id/tvBatch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Batch"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvBatch2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldSection"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/Last_Name"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="20dp"
+        android:textColorHint="#000000"
+        app:hintTextColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/textFieldBatch"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldBatch">
+
+
+        <TextView
+            android:id="@+id/tvSection1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Section"
+            android:textColor="#4C4C4C"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/tvSection2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#EDF4ED"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:textColor="#0E0E0E"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/btnUpdate"
-        android:layout_width="176dp"
-        android:layout_height="52dp"
+        android:id="@+id/btnUpdateProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="24dp"
         android:text="Update"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldSection"
-        app:layout_constraintVertical_bias="0.359" />
+        app:layout_constraintTop_toBottomOf="@+id/textFieldSection" />
+
+    <Button
+        android:id="@+id/btnBackDashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Back to Home"
+        app:layout_constraintStart_toEndOf="@+id/btnUpdateProfile"
+        app:layout_constraintTop_toTopOf="@+id/btnUpdateProfile" />
+    //=============================
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

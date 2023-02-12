@@ -218,7 +218,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldMaidenName"
+        android:id="@+id/textFieldLastName"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginTop="8dp"
@@ -231,7 +231,7 @@
         tools:layout_editor_absoluteX="0dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etMaidenName"
+            android:id="@+id/etLastName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="0dp"
@@ -241,7 +241,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldLastName"
+        android:id="@+id/textFieldMaidenName"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginTop="8dp"
@@ -250,11 +250,11 @@
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/textFieldMaidenName"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">
+        app:layout_constraintStart_toStartOf="@+id/textFieldLastName"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldLastName">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etLastName"
+            android:id="@+id/etMaidenName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="0dp"
@@ -273,8 +273,8 @@
         android:paddingEnd="10dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintStart_toStartOf="@+id/textFieldLastName"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldLastName">
+        app:layout_constraintStart_toStartOf="@+id/textFieldMaidenName"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etMobile"

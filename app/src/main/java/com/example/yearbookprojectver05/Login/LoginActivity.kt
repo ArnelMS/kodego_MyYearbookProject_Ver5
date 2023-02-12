@@ -55,6 +55,8 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                 // Sign in Success, Navigate to the Main Activity
                     val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra("auth",auth.uid)
+                    intent.putExtra("email",inputEmail)
                     startActivity(intent)
 
                     Toast.makeText(baseContext, "Success!!",Toast.LENGTH_SHORT).show()

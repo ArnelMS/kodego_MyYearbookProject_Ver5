@@ -38,7 +38,6 @@
             android:background="#EDF4ED"
             android:paddingStart="5dp"
             android:paddingTop="3dp"
-            android:text="MENDOZA"
             android:textColor="#0E0E0E"
             android:textSize="14sp" />
 
@@ -56,8 +55,8 @@
         android:paddingEnd="20dp"
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="5dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <TextView
@@ -76,7 +75,6 @@
             android:background="#EDF4ED"
             android:paddingStart="5dp"
             android:paddingTop="3dp"
-            android:text="ARNEL"
             android:textColor="#0E0E0E"
             android:textSize="14sp" />
 
@@ -101,7 +99,7 @@
             android:id="@+id/tvEmail1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Last_Name"
+            android:text="@string/Email"
             android:textColor="#4C4C4C"
             android:textSize="6sp" />
 
@@ -113,7 +111,6 @@
             android:background="#EDF4ED"
             android:paddingStart="5dp"
             android:paddingTop="3dp"
-            android:text="SEBASTIAN"
             android:textColor="#0E0E0E"
             android:textSize="14sp" />
 
@@ -129,14 +126,15 @@
 
     <ImageView
         android:id="@+id/imgProfileNew"
-        android:layout_width="97dp"
-        android:layout_height="110dp"
+        android:layout_width="93dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintStart_toEndOf="@+id/textFieldFirstName"
         app:layout_constraintTop_toTopOf="@+id/textFieldFirstName"
         app:srcCompat="@drawable/profile_modern" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldLastName"
+        android:id="@+id/textFieldMaidenName"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="12dp"
@@ -166,14 +164,13 @@
             android:background="#EDF4ED"
             android:paddingStart="5dp"
             android:paddingTop="3dp"
-            android:text="SEBASTIAN"
             android:textColor="#0E0E0E"
             android:textSize="14sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldMaidenName"
+        android:id="@+id/textFieldLastName"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="12dp"
@@ -184,14 +181,14 @@
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/textFieldItemDescription"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldLastName">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">
 
 
         <TextView
             android:id="@+id/tvMaidenName1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Last_Name"
+            android:text="@string/Maiden_Name"
             android:textColor="#4C4C4C"
             android:textSize="6sp" />
 
@@ -203,7 +200,6 @@
             android:background="#EDF4ED"
             android:paddingStart="5dp"
             android:paddingTop="3dp"
-            android:text="SEBASTIAN"
             android:textColor="#0E0E0E"
             android:textSize="14sp" />
 
@@ -221,14 +217,14 @@
         android:textColorHint="#000000"
         app:hintTextColor="#000000"
         app:layout_constraintStart_toStartOf="@+id/textFieldItemDescription"
-        app:layout_constraintTop_toBottomOf="@+id/textFieldMaidenName">
+        app:layout_constraintTop_toBottomOf="@+id/textFieldLastName">
 
 
         <TextView
             android:id="@+id/tvMobile1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Last_Name"
+            android:text="@string/Mobile"
             android:textColor="#4C4C4C"
             android:textSize="6sp" />
 
@@ -240,7 +236,6 @@
             android:background="#EDF4ED"
             android:paddingStart="5dp"
             android:paddingTop="3dp"
-            android:text="SEBASTIAN"
             android:textColor="#0E0E0E"
             android:textSize="14sp" />
 
@@ -265,7 +260,7 @@
             android:id="@+id/tvFacebookUrl1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Last_Name"
+            android:text="@string/Facebook_URL"
             android:textColor="#4C4C4C"
             android:textSize="6sp" />
 
@@ -277,7 +272,6 @@
             android:background="#EDF4ED"
             android:paddingStart="5dp"
             android:paddingTop="3dp"
-            android:text="SEBASTIAN"
             android:textColor="#0E0E0E"
             android:textSize="14sp" />
 
@@ -302,7 +296,7 @@
             android:id="@+id/tvSchool1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Last_Name"
+            android:text="School"
             android:textColor="#4C4C4C"
             android:textSize="6sp" />
 
@@ -314,7 +308,6 @@
             android:background="#EDF4ED"
             android:paddingStart="5dp"
             android:paddingTop="3dp"
-            android:text="SEBASTIAN"
             android:textColor="#0E0E0E"
             android:textSize="14sp" />
 
@@ -339,7 +332,7 @@
             android:id="@+id/tvBatch1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Last_Name"
+            android:text="Batch"
             android:textColor="#4C4C4C"
             android:textSize="6sp" />
 
@@ -351,7 +344,6 @@
             android:background="#EDF4ED"
             android:paddingStart="5dp"
             android:paddingTop="3dp"
-            android:text="SEBASTIAN"
             android:textColor="#0E0E0E"
             android:textSize="14sp" />
 
@@ -376,7 +368,7 @@
             android:id="@+id/tvSection1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Last_Name"
+            android:text="Section"
             android:textColor="#4C4C4C"
             android:textSize="6sp" />
 
@@ -388,11 +380,29 @@
             android:background="#EDF4ED"
             android:paddingStart="5dp"
             android:paddingTop="3dp"
-            android:text="SEBASTIAN"
             android:textColor="#0E0E0E"
             android:textSize="14sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnUpdateProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="24dp"
+        android:text="Update"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldSection" />
+
+    <Button
+        android:id="@+id/btnBackDashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Back to Home"
+        app:layout_constraintStart_toEndOf="@+id/btnUpdateProfile"
+        app:layout_constraintTop_toTopOf="@+id/btnUpdateProfile" />
     //=============================
 
 

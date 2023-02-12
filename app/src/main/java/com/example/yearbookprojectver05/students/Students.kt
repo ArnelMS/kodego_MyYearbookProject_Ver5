@@ -1,6 +1,7 @@
 package com.example.yearbookprojectver05.students
 
 data class Students(
+    val uid : String,
     val imageNew: String,
     val imageOld: String,
     val firstName: String,
@@ -10,6 +11,6 @@ data class Students(
     val mobile: String,
     val email: String,
     val facebookURL: String,
+    val school: String,
     val batch: String,
-    val section: String,
-    val school: String)
+    val section: String)

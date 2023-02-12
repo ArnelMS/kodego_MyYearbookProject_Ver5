@@ -7,12 +7,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.yearbookprojectver05.R
 import com.example.yearbookprojectver05.databinding.RowItemDashboardBinding
+import com.example.yearbookprojectver05.students.Students
 import com.google.firebase.storage.FirebaseStorage
 import java.io.File
 
 
 class DashboardAdapter(val dashboard:MutableList<Dashboard>):RecyclerView.Adapter<DashboardAdapter.DashboardViewHolder>() {
 
+
+    var onItemClick : ((Dashboard) -> Unit?)? = null
     inner class DashboardViewHolder( val binding: RowItemDashboardBinding):RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DashboardViewHolder {
@@ -22,23 +25,27 @@ class DashboardAdapter(val dashboard:MutableList<Dashboard>):RecyclerView.Adapte
     }
     override fun onBindViewHolder(holder: DashboardViewHolder, position: Int) {
         holder.binding.apply {
-            etItemTitle.text = dashboard[position].itemDashTitle
-            etItemDescription.text = dashboard[position].itemDashTitle
 
-            if(dashboard[position].imageDashboardItem == "") {
+            etItemTitle.text = dashboard[position].itemDashTitle
+            etItemDescription.text = dashboard[position].itemDashDescription
+
+            if (dashboard[position].imageDashboardItem == "") {
                 imgDashboardNewItem.setImageResource(R.drawable.profile_modern)
             } else {
                 // Retrieve Image
                 val imageName = dashboard[position].imageDashboardItem
                 val storageRef = FirebaseStorage.getInstance().reference.child("images/$imageName")
-                val localFile = File.createTempFile("tempImage","jpg")
+                val localFile = File.createTempFile("tempImage", "jpg")
                 storageRef.getFile(localFile)
                     .addOnSuccessListener {
                         val bitmap = BitmapFactory.decodeFile(localFile.absolutePath)
                         imgDashboardNewItem.setImageBitmap(bitmap)
                     }
             }
-            return
+            holder.itemView.setOnClickListener() {
+                onItemClick?.invoke(dashboard[position])
+            }
+
         }
     }
 

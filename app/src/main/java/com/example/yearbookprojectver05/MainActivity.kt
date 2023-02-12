@@ -15,12 +15,16 @@ import com.example.yearbookprojectver05.ui.dashboard.DashboardFragment
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
+    private lateinit var uid : String
+    private lateinit var email : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        uid = intent.getStringExtra("auth").toString()
+        email = intent.getStringExtra("email").toString()
         val fragmentOneHome = FragmentOneHome()
         val fragmentTwoDashboard = DashboardFragment.FragmentTwoDashboard()
         val fragmentThreeMyYearbook = FragmentThreeMyYearbook()
@@ -70,6 +74,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnMenu.setOnClickListener() {
             val intent = Intent(this, MenuSettingsActivity::class.java)
+            intent.putExtra("auth",uid)
+            intent.putExtra("email",email)
             startActivity(intent)
 //        }
 //            showCustomDialog()

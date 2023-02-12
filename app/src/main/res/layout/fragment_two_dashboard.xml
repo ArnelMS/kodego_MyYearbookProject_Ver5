@@ -11,22 +11,6 @@
 
     <!--        tools:listitem="@layout/user_event_row" />-->
 
-    <EditText
-        android:id="@+id/searchEt"
-        android:layout_width="218dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="17dp"
-        android:drawableStart="@drawable/search_icon"
-        android:hint="Search"
-        android:paddingStart="0dp"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvDashboard"
-        app:layout_constraintTop_toTopOf="@+id/tvDashboard">
-
-    </EditText>
-
     <TextView
         android:id="@+id/tvDashboard"
         android:layout_width="165dp"
@@ -42,8 +26,9 @@
 
     <FrameLayout
         android:id="@+id/frameLayout2"
-        android:layout_width="440dp"
+        android:layout_width="0dp"
         android:layout_height="564dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDashboard">
 
@@ -53,7 +38,8 @@
             android:layout_height="540dp"
             android:layout_marginTop="20dp"
             android:paddingStart="20dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_item_dashboard"/>
 
     </FrameLayout>
 

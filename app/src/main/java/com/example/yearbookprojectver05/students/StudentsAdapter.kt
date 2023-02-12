@@ -1,5 +1,6 @@
 package com.example.yearbookprojectver05.students
 
+import android.content.Intent
 import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -11,7 +12,9 @@ import java.io.File
 
 class StudentAdapter(val students: MutableList<Students>):RecyclerView.Adapter<StudentAdapter.StudentViewHolder>(){
 
+    var onItemClick : ((Students) -> Unit?)? = null
     inner class StudentViewHolder(var binding: RowItemStudentsBinding): RecyclerView.ViewHolder(binding.root)
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StudentViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -63,6 +66,9 @@ class StudentAdapter(val students: MutableList<Students>):RecyclerView.Adapter<S
             }
 
 
+        holder.itemView.setOnClickListener(){
+            onItemClick?.invoke(students[position])
+        }
 
             return
 

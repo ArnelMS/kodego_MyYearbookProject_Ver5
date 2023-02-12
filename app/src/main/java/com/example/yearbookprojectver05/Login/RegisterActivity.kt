@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.yearbookprojectver05.databinding.ActivityRegisterBinding
+import com.example.yearbookprojectver05.students.Students
+import com.example.yearbookprojectver05.students.StudentsDao
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -15,6 +17,7 @@ class RegisterActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     lateinit var binding : ActivityRegisterBinding
+    var dao = StudentsDao()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

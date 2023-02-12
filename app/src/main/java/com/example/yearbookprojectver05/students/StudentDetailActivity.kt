@@ -3,16 +3,25 @@ package com.example.yearbookprojectver05.students
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.yearbookprojectver05.MenuSettingsActivity
 import com.example.yearbookprojectver05.databinding.ActivityStudentDetailBinding
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.Query
+import com.google.firebase.database.ValueEventListener
 
 class StudentDetailActivity : AppCompatActivity() {
 
     lateinit var binding : ActivityStudentDetailBinding
+    var dao = StudentsDao()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityStudentDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        dao.get()
 
         // data from home activity
         var imageProfile:Int = intent.getIntExtra("imageNew",0)
@@ -37,13 +46,11 @@ class StudentDetailActivity : AppCompatActivity() {
         binding.tvMobile2.text = mobile
         binding.tvEmail2.text = email
         binding.tvFacebookUrl2.text = facebookUrl
+        binding.tvMobile2.text = school
+        binding.tvEmail2.text = batch
+        binding.tvSection2.text = section
 
-
-//        binding.tvFirstName2.text = firstName
-//        binding.tvFirstName2.text = firstName
-//        binding.tvFirstName2.text = firstName
-//        binding.tvFirstName2.text = firstName
-
-
+        return
     }
+
 }

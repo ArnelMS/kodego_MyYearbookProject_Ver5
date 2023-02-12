@@ -14,9 +14,12 @@ class UpdateProfileActivity : AppCompatActivity() {
         binding = ActivityUpdateProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnUpdate.setOnClickListener(){
+        binding.btnUpdateProfile.setOnClickListener(){
             Toast.makeText(applicationContext, "Profile Updated", Toast.LENGTH_LONG).show()
        }
+        binding.btnBackDashboard.setOnClickListener(){
+            Toast.makeText(applicationContext, "HOME", Toast.LENGTH_LONG).show()
+        }
 
     }
 }
